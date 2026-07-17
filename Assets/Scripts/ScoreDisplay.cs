@@ -5,13 +5,9 @@ public class ScoreDisplay : MonoBehaviour
 {
     [SerializeField]TextMeshProUGUI displayText;
 
-    void OnEnable()
-    {
-        GameManager.Instance.scoreChanged += DisplayScore;
-    }
-
     void Start()
     {
+        GameManager.Instance.scoreChanged += DisplayScore;
         displayText.text = $"Score: {GameManager.Instance.Score}";
     }
 

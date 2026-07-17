@@ -10,7 +10,7 @@ public class LevelManager : MonoBehaviour
     int ultimoEscolhido = -1;
 
     public float TimeLeft => timeLeft;
-
+    bool ended = false;
     void Awake()
     {
         Instance = this;
@@ -24,25 +24,26 @@ public class LevelManager : MonoBehaviour
     void Start()
     {
         coletaveis = FindObjectsByType<Collectable>(0);
-        foreach(Collectable coletavel in coletaveis)
-        {
-            coletavel.collected+=HabilitarAleatorio;
-        }
         HabilitarAleatorio();
     }
 
-
     void Update()
     {
+        if (ended)
+        {
+            return;
+        }
         timeLeft -= Time.deltaTime;
         if (timeLeft <= 0)
         {
             timeLeft = 0;
-            GameManager.Instance.StartNewLevel();
+            // GameManager.Instance.StartNewLevel();
+            CanvasManager.Instance.DisplayEndPanel();
+            ended = true;
         }
     }
 
-    void HabilitarAleatorio()
+    public void HabilitarAleatorio()
     {
         foreach(Collectable coletavel in coletaveis)
         {
@@ -58,11 +59,4 @@ public class LevelManager : MonoBehaviour
         ultimoEscolhido = escolhido;
     }
 
-    void OnDisable()
-    {
-        foreach(Collectable coletavel in coletaveis)
-        {
-            coletavel.collected-=HabilitarAleatorio;
-        }
-    }
 }
