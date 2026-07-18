@@ -7,7 +7,7 @@ public class LevelManager : MonoBehaviour
     public static LevelManager Instance {get; private set;}
     [SerializeField]float timeLeft = 5;
     Collectable[] coletaveis;
-    int ultimoEscolhido = -1;
+    Collectable ultimoEscolhido;
 
     public float TimeLeft => timeLeft;
     bool ended = false;
@@ -50,12 +50,12 @@ public class LevelManager : MonoBehaviour
             coletavel.gameObject.SetActive(false);
         }
         List<Collectable>provisorio = coletaveis.ToList();
-        if (ultimoEscolhido >= 0 && ultimoEscolhido < provisorio.Count)
+        if (ultimoEscolhido != null && provisorio.Contains(ultimoEscolhido) && provisorio.Count > 1)
         {
-            provisorio.RemoveAt(ultimoEscolhido);
+            provisorio.Remove(ultimoEscolhido);
         }
-        int escolhido = Random.Range(0, provisorio.Count);
-        provisorio[escolhido].gameObject.SetActive(true);
+        Collectable escolhido = provisorio[Random.Range(0, provisorio.Count)];
+        escolhido.gameObject.SetActive(true);
         ultimoEscolhido = escolhido;
     }
 

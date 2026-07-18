@@ -2,12 +2,6 @@ using UnityEngine;
 
 public class Obstacle : MonoBehaviour
 {
-
-    void OnTriggerEnter2D(Collider2D collision)
-    {
-        if (collision.gameObject.CompareTag("Player"))
-        {
-            GameManager.Instance.LoseGame();
-        }
-    }
+    [SerializeField]int valueToDecrease = 100;
+    public int ValueToDecrease => valueToDecrease;
 }

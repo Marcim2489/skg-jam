@@ -13,12 +13,24 @@ public class GameManager : MonoBehaviour
     public int CiclesToGo => cenarios.Count - cenariosPercorridos;
     public event UnityAction levelStarted = delegate {};
     public event UnityAction<int> scoreIncreased = delegate {};
+    public event UnityAction<int> scoreDecreased = delegate {};
     public event UnityAction<int> scoreChanged = delegate {};
 
     List<string> cenarios = new List<string>(4){"Cenario 1","Cenario 2","Cenario 3","Cenario 4"};
     int coletadosNoCenarioAtual = 0;
     int cenariosPercorridos = 0;
     int aliquota = 5000;
+    public bool BrokeRecord {get; private set;}
+
+    string[] personagens = {
+        "Puffles", //gato - 0
+        "Cachorro" // - 1
+        };
+
+    public int IdPersonagemAtual {get; private set;}
+    public string NomePersonagemAtual => personagens[IdPersonagemAtual];
+
+    Dictionary<string, int> recordes = new Dictionary<string, int>(2);
 
     void Awake()
     {
@@ -26,6 +38,14 @@ public class GameManager : MonoBehaviour
         {
             Instance = this;
             DontDestroyOnLoad(gameObject);
+            foreach (string personagem in personagens)
+            {
+                recordes[personagem] = GetRecord(personagem);
+            }
+            foreach (string p in recordes.Keys)
+            {
+                Debug.Log($"{p} -- {recordes[p]}");
+            }
             return;
         }
         else
@@ -34,7 +54,23 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    public void StartRun()
+    public bool SaveRecord(string personagem, int score)
+    {
+        if (recordes.ContainsKey(personagem) == false || score > recordes[personagem])
+        {
+            recordes[personagem] = score;
+            PlayerPrefs.SetInt($"Recorde_{personagem}", score);
+            return true;
+        }
+        return false;
+    }
+
+    public int GetRecord(string personagem)
+    {
+        return PlayerPrefs.GetInt($"Recorde_{personagem}");
+    }
+
+    public void StartRun(int idPersonagem)
     {
         for (int i = 0; i < cenarios.Count; i++)
         {
@@ -43,7 +79,10 @@ public class GameManager : MonoBehaviour
             cenarios[i] = cenarios[randomIndex];
             cenarios[randomIndex] = temp;
         }
+        IdPersonagemAtual = idPersonagem;
         Score = 0;
+        aliquota = 5000;
+        BrokeRecord = false;
         StartNewLevel();
     }
 
@@ -55,7 +94,7 @@ public class GameManager : MonoBehaviour
         {
             if (Score < aliquota)
             {
-                LoseGame();
+                EndRun();
                 return;
             }
             aliquota += 1000;
@@ -77,6 +116,19 @@ public class GameManager : MonoBehaviour
         levelStarted.Invoke();
     }
 
+    public void DecreaseScore(int amount)
+    {
+        int prevScore = Score;
+        Score -= amount;
+        if (Score < 0)
+        {
+            Score = 0;
+        }
+        coletadosNoCenarioAtual = 0;
+        scoreDecreased.Invoke(prevScore - Score);
+        scoreChanged.Invoke(Score);
+    }
+
     public void IncreaseScore(int amount)
     {
         int totalIncrease = Mathf.RoundToInt(amount * (1 + 0.1f*coletadosNoCenarioAtual));
@@ -87,11 +139,17 @@ public class GameManager : MonoBehaviour
         scoreChanged.Invoke(Score);
     }
 
-    public void LoseGame()
+    public void EndRun()
     {
+        BrokeRecord = SaveRecord(NomePersonagemAtual, Score);
         coletadosNoCenarioAtual = 0;
         cenariosPercorridos = 0;
         ScoredNow = 0;
+        // Score = 0;
+        foreach (string p in recordes.Keys)
+        {
+            Debug.Log($"{p} -- {recordes[p]}");
+        }
         SceneManager.LoadScene("Game over");
     }
 }
