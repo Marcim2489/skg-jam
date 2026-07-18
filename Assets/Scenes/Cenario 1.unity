@@ -164,6 +164,54 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 25090979651999380, guid: 880c4c5dbb9b59f4c91199a055d0592e, type: 3}
   m_PrefabInstance: {fileID: 554033912}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &352153778
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 352153779}
+  - component: {fileID: 352153780}
+  m_Layer: 0
+  m_Name: obstacle spawner
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &352153779
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 352153778}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -7.35, y: 3.97, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &352153780
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 352153778}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 15cbacf44fd5b094a9c8697dd9dd85c0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Spawner
+  prefab: {fileID: 8560677387905776174, guid: 0776fbe64fafa774a95b48f610012080, type: 3}
+  timeToSpawn: 2
+  spawnOffset: {x: 0, y: 0}
+  startingRotation: {x: 0, y: 0, z: 0, w: 0}
 --- !u!4 &483798379 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 25090979651999380, guid: 880c4c5dbb9b59f4c91199a055d0592e, type: 3}
@@ -741,15 +789,27 @@ PrefabInstance:
       propertyPath: m_Name
       value: Obstacle (3)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 1017918730530372513, guid: 26440c88137fac94aa948822656f10ba, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 6338366572763719043, guid: 26440c88137fac94aa948822656f10ba, type: 3}
+      insertIndex: 2
+      addedObject: {fileID: 2048239673}
+    - targetCorrespondingSourceObject: {fileID: 6338366572763719043, guid: 26440c88137fac94aa948822656f10ba, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2048239672}
   m_SourcePrefab: {fileID: 100100000, guid: 26440c88137fac94aa948822656f10ba, type: 3}
 --- !u!4 &832135643 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 25090979651999380, guid: 880c4c5dbb9b59f4c91199a055d0592e, type: 3}
   m_PrefabInstance: {fileID: 617590504}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &839164896 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6338366572763719043, guid: 26440c88137fac94aa948822656f10ba, type: 3}
+  m_PrefabInstance: {fileID: 829949272}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &858653203
 PrefabInstance:
@@ -958,9 +1018,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::BouncingObstacle
   valueToDecrease: 100
   rigidbody2d: {fileID: 1072376808}
-  wallDetector: {fileID: 1072376809}
   velocidade: 8
   initialDirection: {x: 1, y: -1}
+  lifeTime: 0
+  wallDetector: {fileID: 1072376809}
 --- !u!58 &1072376811
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -1246,7 +1307,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6338366572763719043, guid: 26440c88137fac94aa948822656f10ba, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 1017918730530372513, guid: 26440c88137fac94aa948822656f10ba, type: 3}
@@ -1781,6 +1842,50 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3690292027421480490, guid: 26440c88137fac94aa948822656f10ba, type: 3}
   m_PrefabInstance: {fileID: 829949272}
   m_PrefabAsset: {fileID: 0}
+--- !u!50 &2048239672
+Rigidbody2D:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 839164896}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 4
+--- !u!114 &2048239673
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 839164896}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3c34a481dba538848a735f1945749fde, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::MovingObstacle
+  valueToDecrease: 100
+  rigidbody2d: {fileID: 2048239672}
+  velocidade: 8
+  initialDirection: {x: 1, y: 0}
+  lifeTime: 5
 --- !u!1001 &728732786842405193
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2212,3 +2317,4 @@ SceneRoots:
   - {fileID: 2040918826}
   - {fileID: 1978876113}
   - {fileID: 558734220}
+  - {fileID: 352153779}

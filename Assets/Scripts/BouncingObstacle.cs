@@ -1,16 +1,13 @@
 using UnityEngine;
 
-public class BouncingObstacle : Obstacle
+public class BouncingObstacle : MovingObstacle
 {
-    [SerializeField]Rigidbody2D rigidbody2d;
     [SerializeField]ObstacleWallDetector wallDetector;
-    [SerializeField]float velocidade = 8;
-    [SerializeField]Vector2 initialDirection;
 
-    void Start()
+    protected override void Start()
     {
+        base.Start();
         wallDetector.hitWall+=ChangeDirection;
-        rigidbody2d.linearVelocity = initialDirection.normalized * velocidade;
     }
 
     void ChangeDirection(Vector2 direction)

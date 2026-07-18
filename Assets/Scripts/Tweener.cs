@@ -1,7 +1,7 @@
 using UnityEngine;
 using DG.Tweening;
 
-public class ObstacleTween : MonoBehaviour
+public class Tweener : MonoBehaviour
 {
     [SerializeField]Vector3 moveVector;
     [SerializeField]float moveTime;
