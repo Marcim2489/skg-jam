@@ -125,7 +125,9 @@ public class GameManager : MonoBehaviour
             Score = 0;
         }
         coletadosNoCenarioAtual = 0;
-        scoreDecreased.Invoke(prevScore - Score);
+        int totalDecrease = prevScore - Score;
+        ScoredNow -= totalDecrease;
+        scoreDecreased.Invoke(totalDecrease);
         scoreChanged.Invoke(Score);
     }
 
