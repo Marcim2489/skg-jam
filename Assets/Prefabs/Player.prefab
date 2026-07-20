@@ -295,6 +295,7 @@ MonoBehaviour:
     m_Flags: 0
   animator: {fileID: 3447302725960583457}
   spriteRenderer: {fileID: 6819601231446575268}
+  obstacleDetector: {fileID: 1364157179146830555}
 --- !u!50 &622155060268079779
 Rigidbody2D:
   serializedVersion: 5

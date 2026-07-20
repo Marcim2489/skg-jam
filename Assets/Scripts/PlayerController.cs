@@ -1,3 +1,4 @@
+using System.Security.Cryptography;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -8,10 +9,13 @@ public class PlayerController : MonoBehaviour
     [SerializeField]InputAction movement;
     [SerializeField]Animator animator;
     [SerializeField]SpriteRenderer spriteRenderer;
+    [SerializeField]ObstacleDetector obstacleDetector;
 
     void Start()
     {
         movement.Enable();
+        obstacleDetector.immunityStarted+=AplicarEfeitoImunidade;
+        obstacleDetector.immunityEnded+=DesaplicarEfeitoImunidade;
     }
 
     void Update()
@@ -28,6 +32,22 @@ public class PlayerController : MonoBehaviour
         {
             spriteRenderer.flipX = true;
         }
-
     }
+
+    void OnDestroy()
+    {
+        obstacleDetector.immunityStarted-=AplicarEfeitoImunidade;
+        obstacleDetector.immunityEnded-=DesaplicarEfeitoImunidade;
+    }
+
+    void AplicarEfeitoImunidade()
+    {
+        spriteRenderer.color = new Color(0.6f,0.6f,0.6f,1);
+    }
+
+    void DesaplicarEfeitoImunidade()
+    {
+        spriteRenderer.color = new Color(1,1,1,1);
+    }
+
 }

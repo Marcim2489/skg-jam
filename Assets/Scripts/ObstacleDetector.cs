@@ -6,8 +6,8 @@ public class ObstacleDetector : MonoBehaviour
 {
     [SerializeField]float immunityTime = 1f;
     [SerializeField]Collider2D[] colliders;
-    public event UnityAction ImmunityStarted = delegate {};
-    public event UnityAction ImmunityEnded = delegate {};
+    public event UnityAction immunityStarted = delegate {};
+    public event UnityAction immunityEnded = delegate {};
 
     void OnTriggerEnter2D(Collider2D collision)
     {
@@ -33,9 +33,9 @@ public class ObstacleDetector : MonoBehaviour
     IEnumerator ImmunityTimer()
     {
         EnableColliders(false);
-        ImmunityStarted.Invoke();
+        immunityStarted.Invoke();
         yield return new WaitForSeconds(immunityTime);
         EnableColliders(true);
-        ImmunityEnded.Invoke();
+        immunityEnded.Invoke();
     }
 }
