@@ -15,6 +15,7 @@ public class GameManager : MonoBehaviour
     public event UnityAction<int> scoreIncreased = delegate {};
     public event UnityAction<int> scoreDecreased = delegate {};
     public event UnityAction<int> scoreChanged = delegate {};
+    public event UnityAction<int> coletadosAtualMudou = delegate {};
 
     List<string> cenarios = new List<string>(4){"Cenario 1","Cenario 2","Cenario 3","Cenario 4"};
     int coletadosNoCenarioAtual = 0;
@@ -29,6 +30,7 @@ public class GameManager : MonoBehaviour
 
     public int IdPersonagemAtual {get; private set;}
     public string NomePersonagemAtual => personagens[IdPersonagemAtual];
+    public int SequenciaAtual => coletadosNoCenarioAtual;
 
     Dictionary<string, int> recordes = new Dictionary<string, int>(2);
 
@@ -125,6 +127,7 @@ public class GameManager : MonoBehaviour
             Score = 0;
         }
         coletadosNoCenarioAtual = 0;
+        coletadosAtualMudou.Invoke(coletadosNoCenarioAtual);
         int totalDecrease = prevScore - Score;
         ScoredNow -= totalDecrease;
         scoreDecreased.Invoke(totalDecrease);
@@ -137,6 +140,7 @@ public class GameManager : MonoBehaviour
         Score += totalIncrease;
         ScoredNow += totalIncrease;
         coletadosNoCenarioAtual++;
+        coletadosAtualMudou.Invoke(coletadosNoCenarioAtual);
         scoreIncreased.Invoke(totalIncrease);
         scoreChanged.Invoke(Score);
     }

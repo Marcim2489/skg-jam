@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 25090979651999380}
   - component: {fileID: 5708201282039841866}
   - component: {fileID: 9038978264274073718}
-  - component: {fileID: 6006300931714239446}
+  - component: {fileID: 5835704390049665312}
   m_Layer: 0
   m_Name: Coletavel
   m_TagString: Untagged
@@ -83,8 +83,8 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_MaskInteraction: 0
-  m_Sprite: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b, type: 3}
-  m_Color: {r: 1, g: 0.8598435, b: 0, a: 1}
+  m_Sprite: {fileID: 7986038390214772715, guid: ebe087c70d6db244a8e6f5c47229099b, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -92,7 +92,7 @@ SpriteRenderer:
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
-  m_SpriteSortPoint: 0
+  m_SpriteSortPoint: 1
 --- !u!114 &9038978264274073718
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -106,8 +106,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Collectable
   value: 100
---- !u!58 &6006300931714239446
-CircleCollider2D:
+  peixeSprites:
+  - {fileID: 6489138962595911835, guid: fe80f608bb3e5d449bef8b284491adcb, type: 3}
+  - {fileID: 8543715509335647664, guid: a351adafaa42f5b4cbf6d19561f3dd24, type: 3}
+  - {fileID: 1757879627571357515, guid: 257c89473d30fbc4297dc8ea5992371b, type: 3}
+  - {fileID: 7124964412866693446, guid: 43b15a094f45f1043b90b50e88b221eb, type: 3}
+  ossoSprites:
+  - {fileID: 7986038390214772715, guid: ebe087c70d6db244a8e6f5c47229099b, type: 3}
+  - {fileID: -3188634930481553645, guid: a95762c4c2754b241b68174cd140efeb, type: 3}
+  - {fileID: -7777600259911916828, guid: e31679141e8505b4a9168927d98f0bda, type: 3}
+  - {fileID: 860971857886672316, guid: f472743b4eaf95340adc193e00520ecc, type: 3}
+  spriteRenderer: {fileID: 5708201282039841866}
+--- !u!70 &5835704390049665312
+CapsuleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -141,4 +152,5 @@ CircleCollider2D:
   m_CompositeOperation: 0
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
-  m_Radius: 0.5
+  m_Size: {x: 1, y: 0.64}
+  m_Direction: 1

@@ -24,6 +24,10 @@ public class LevelManager : MonoBehaviour
     void Start()
     {
         coletaveis = FindObjectsByType<Collectable>(0);
+        foreach(Collectable coletavel in coletaveis)
+        {
+            coletavel.Setup();
+        }
         HabilitarAleatorio();
     }
 
@@ -55,7 +59,7 @@ public class LevelManager : MonoBehaviour
             provisorio.Remove(ultimoEscolhido);
         }
         Collectable escolhido = provisorio[Random.Range(0, provisorio.Count)];
-        escolhido.gameObject.SetActive(true);
+        escolhido.Habilitar();
         ultimoEscolhido = escolhido;
     }
 
