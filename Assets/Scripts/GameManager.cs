@@ -18,7 +18,7 @@ public class GameManager : MonoBehaviour
     public event UnityAction<int> coletadosAtualMudou = delegate {};
 
     List<string> cenarios = new List<string>(4){"Cenario 1","Cenario 2","Cenario 3","Cenario 4"};
-    int coletadosNoCenarioAtual = 0;
+    int sequenciaAtual = 0;
     int cenariosPercorridos = 0;
     int aliquota = 5000;
     public bool BrokeRecord {get; private set;}
@@ -30,7 +30,7 @@ public class GameManager : MonoBehaviour
 
     public int IdPersonagemAtual {get; private set;}
     public string NomePersonagemAtual => personagens[IdPersonagemAtual];
-    public int SequenciaAtual => coletadosNoCenarioAtual;
+    public int SequenciaAtual => sequenciaAtual;
 
     Dictionary<string, int> recordes = new Dictionary<string, int>(2);
 
@@ -91,7 +91,7 @@ public class GameManager : MonoBehaviour
     public void StartNewLevel()
     {
         ScoredNow = 0;
-        coletadosNoCenarioAtual = 0;
+        sequenciaAtual = 0;
         if (cenariosPercorridos >= cenarios.Count)
         {
             if (Score < aliquota)
@@ -126,8 +126,8 @@ public class GameManager : MonoBehaviour
         {
             Score = 0;
         }
-        coletadosNoCenarioAtual = 0;
-        coletadosAtualMudou.Invoke(coletadosNoCenarioAtual);
+        sequenciaAtual = 0;
+        coletadosAtualMudou.Invoke(sequenciaAtual);
         int totalDecrease = prevScore - Score;
         ScoredNow -= totalDecrease;
         scoreDecreased.Invoke(totalDecrease);
@@ -136,11 +136,21 @@ public class GameManager : MonoBehaviour
 
     public void IncreaseScore(int amount)
     {
-        int totalIncrease = Mathf.RoundToInt(amount * (1 + 0.1f*coletadosNoCenarioAtual));
+        int totalIncrease;
+        if (sequenciaAtual <= 2)
+        {
+            totalIncrease = amount * (sequenciaAtual+1);
+        }else if (sequenciaAtual == 3)
+        {
+            totalIncrease = amount * 5;
+        }else
+        {
+            totalIncrease = amount * 5 + Mathf.RoundToInt(amount*5 * (0.1f*(sequenciaAtual-3)));
+        }
         Score += totalIncrease;
         ScoredNow += totalIncrease;
-        coletadosNoCenarioAtual++;
-        coletadosAtualMudou.Invoke(coletadosNoCenarioAtual);
+        sequenciaAtual++;
+        coletadosAtualMudou.Invoke(sequenciaAtual);
         scoreIncreased.Invoke(totalIncrease);
         scoreChanged.Invoke(Score);
     }
@@ -148,7 +158,7 @@ public class GameManager : MonoBehaviour
     public void EndRun()
     {
         BrokeRecord = SaveRecord(NomePersonagemAtual, Score);
-        coletadosNoCenarioAtual = 0;
+        sequenciaAtual = 0;
         cenariosPercorridos = 0;
         ScoredNow = 0;
         // Score = 0;
