@@ -10,7 +10,7 @@ public class CanvasManager : MonoBehaviour
     // [SerializeField]TextMeshProUGUI timesUpText;
     [SerializeField]TextMeshProUGUI scoredNowText;
     [SerializeField]TextMeshProUGUI totalScoreText;
-    [SerializeField]TextMeshProUGUI goalText;
+    // [SerializeField]TextMeshProUGUI goalText;
     [SerializeField]TextMeshProUGUI ciclesText;
 
     void Awake()
@@ -35,7 +35,7 @@ public class CanvasManager : MonoBehaviour
         timeText.text = "0";
         scoredNowText.text = $"Scored now: {GameManager.Instance.ScoredNow}";
         totalScoreText.text = $"Total score: {GameManager.Instance.Score}";
-        goalText.text = $"Goal: {GameManager.Instance.Aliquota}";
+        // goalText.text = $"Goal: {GameManager.Instance.Aliquota}";
         ciclesText.text = $"{GameManager.Instance.CiclesToGo}";
         panel.SetActive(true);
     }

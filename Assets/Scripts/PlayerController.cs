@@ -25,8 +25,8 @@ public class PlayerController : MonoBehaviour
     void Start()
     {
         movement.Enable();
-        obstacleDetector.immunityStarted+=AplicarEfeitoImunidade;
-        obstacleDetector.immunityEnded+=DesaplicarEfeitoImunidade;
+        // obstacleDetector.immunityStarted+=AplicarEfeitoImunidade;
+        // obstacleDetector.immunityEnded+=DesaplicarEfeitoImunidade;
     }
 
     void Update()
@@ -69,11 +69,11 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    void OnDestroy()
-    {
-        obstacleDetector.immunityStarted-=AplicarEfeitoImunidade;
-        obstacleDetector.immunityEnded-=DesaplicarEfeitoImunidade;
-    }
+    // void OnDestroy()
+    // {
+    //     obstacleDetector.immunityStarted-=AplicarEfeitoImunidade;
+    //     obstacleDetector.immunityEnded-=DesaplicarEfeitoImunidade;
+    // }
 
     void AplicarEfeitoImunidade()
     {

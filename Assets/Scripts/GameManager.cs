@@ -9,7 +9,7 @@ public class GameManager : MonoBehaviour
 
     public int Score {get; private set;}
     public int ScoredNow => Score - scoreAtTheStart;
-    public int Aliquota => aliquota;
+    // public int Aliquota => aliquota;
     public int CiclesToGo => cenarios.Count - cenariosPercorridos;
     public event UnityAction levelStarted = delegate {};
     public event UnityAction<int> scoreIncreased = delegate {};
@@ -20,7 +20,7 @@ public class GameManager : MonoBehaviour
     List<string> cenarios = new List<string>(4){"Cenario 1","Cenario 2","Cenario 3","Cenario 4"};
     int sequenciaAtual = 0;
     int cenariosPercorridos = 0;
-    int aliquota = 5000;
+    // int aliquota = 5000;
     public bool BrokeRecord {get; private set;}
     int scoreAtTheStart;
 
@@ -90,7 +90,7 @@ public class GameManager : MonoBehaviour
         IdPersonagemAtual = idPersonagem;
         Score = 0;
         scoreAtTheStart = 0;
-        aliquota = 5000;
+        // aliquota = 5000;
         BrokeRecord = false;
         StartNewLevel();
     }
@@ -99,12 +99,12 @@ public class GameManager : MonoBehaviour
     {
         if (cenariosPercorridos >= cenarios.Count)
         {
-            if (Score < aliquota)
-            {
-                EndRun();
-                return;
-            }
-            aliquota += 1000;
+            // if (Score < aliquota)
+            // {
+            //     EndRun();
+            //     return;
+            // }
+            // aliquota += 1000;
             cenariosPercorridos = 0;
             int rid = Random.Range(0, cenarios.Count-1);
             string tip = cenarios[0];
@@ -142,11 +142,12 @@ public class GameManager : MonoBehaviour
 
     public void IncreaseScore(int amount)
     {
+        sequenciaAtual++;
         int totalIncrease;
-        if (sequenciaAtual <= 2)
+        if (sequenciaAtual <= 3)
         {
-            totalIncrease = amount * (sequenciaAtual+1);
-        }else if (sequenciaAtual == 3)
+            totalIncrease = amount;
+        }else if (sequenciaAtual <= 6)
         {
             totalIncrease = amount * 5;
         }else
@@ -154,7 +155,7 @@ public class GameManager : MonoBehaviour
             totalIncrease = amount * 5 + Mathf.RoundToInt(amount*5 * (0.1f*(sequenciaAtual-3)));
         }
         Score += totalIncrease;
-        sequenciaAtual++;
+        
         coletadosAtualMudou.Invoke(sequenciaAtual);
         scoreIncreased.Invoke(totalIncrease);
         scoreChanged.Invoke(Score);
