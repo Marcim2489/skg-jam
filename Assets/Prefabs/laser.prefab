@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5691311962585334636}
   - component: {fileID: 3268480962570040561}
+  - component: {fileID: 1012869773289433336}
   - component: {fileID: 3253230758731715889}
   - component: {fileID: 5237531375386088673}
   m_Layer: 0
@@ -29,7 +30,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.6, y: 1, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -83,16 +84,30 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_MaskInteraction: 0
-  m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  m_Color: {r: 0, g: 1, b: 0.93424654, a: 1}
+  m_Sprite: {fileID: -7086537323571785821, guid: 3fd84d5caebf4b34a899b086094a2e5b, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
-  m_DrawMode: 0
+  m_DrawMode: 2
   m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+--- !u!114 &1012869773289433336
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8242879961915949485}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f013f7d52cdd5bc4dbcd70396f7086c8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LaserInstance
+  spriteRenderer: {fileID: 3268480962570040561}
+  boxCollider: {fileID: 3253230758731715889}
 --- !u!61 &3253230758731715889
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -134,10 +149,10 @@ BoxCollider2D:
     oldSize: {x: 1, y: 1}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
-    drawMode: 0
+    drawMode: 2
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 0.5, y: 1}
   m_EdgeRadius: 0
 --- !u!114 &5237531375386088673
 MonoBehaviour:
