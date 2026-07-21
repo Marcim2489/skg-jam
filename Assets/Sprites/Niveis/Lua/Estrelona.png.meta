@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 1a0dd95930c56724aab32d84671ca9f3
+guid: e26a69e85e9a28242aa621fd1098b11e
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -6128095244407038750
-    second: ArvoreCopas2_0
+      213: 2877012772049230974
+    second: Estrelona_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -24,7 +24,7 @@ TextureImporter:
     heightScale: 0.25
     normalMapFilter: 0
     flipGreenChannel: 0
-  isReadable: 1
+  isReadable: 0
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
@@ -51,7 +51,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 16
+  spritePixelsToUnits: 15
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -100,23 +100,23 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: ArvoreCopas2_0
+      name: Estrelona_0
       rect:
         serializedVersion: 2
-        x: 2
-        y: 16
-        width: 58
-        height: 62
-      alignment: 9
-      pivot: {x: 0.5, y: 0.14}
+        x: 0
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 2ec9b5fd7d1a4faa0800000000000000
-      internalID: -6128095244407038750
+      spriteID: e7c91448fd33de720800000000000000
+      internalID: 2877012772049230974
       vertices: []
       indices: 
       edges: []
@@ -125,7 +125,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 1ff10047e70c0d94c9b30c4c578f245a
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -135,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      ArvoreCopas2_0: -6128095244407038750
+      Estrelona_0: 2877012772049230974
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
