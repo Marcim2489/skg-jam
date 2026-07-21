@@ -1,9 +1,10 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class MenuManager : MonoBehaviour
 {
     public void Play()
     {
-        GameManager.Instance.StartRun(0);
+        SceneManager.LoadScene("Character select");
     }
 }

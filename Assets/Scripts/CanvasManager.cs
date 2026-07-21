@@ -45,4 +45,10 @@ public class CanvasManager : MonoBehaviour
         Time.timeScale = 1;
         GameManager.Instance.StartNewLevel();
     }
+
+    public void GiveUp()
+    {
+        Time.timeScale = 1;
+        GameManager.Instance.EndRun();
+    }
 }

@@ -1,3 +1,4 @@
+using System.Security.Cryptography;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -20,10 +21,13 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private int particlesPerStep = 3;
 
     private float dustTimer;
+    [SerializeField]ObstacleDetector obstacleDetector;
 
     void Start()
     {
         movement.Enable();
+        obstacleDetector.immunityStarted+=AplicarEfeitoImunidade;
+        obstacleDetector.immunityEnded+=DesaplicarEfeitoImunidade;
     }
 
     void Update()
@@ -48,6 +52,7 @@ public class PlayerController : MonoBehaviour
             spriteRenderer.flipX = true;
             dustPoint.localPosition = new Vector3(0.12f, -0.18f, 0);
         }
+    }
 
         // Emissão de poeira
         if (moving)
@@ -65,4 +70,21 @@ public class PlayerController : MonoBehaviour
             dustTimer = dustInterval;
         }
     }
+}
+    void OnDestroy()
+    {
+        obstacleDetector.immunityStarted-=AplicarEfeitoImunidade;
+        obstacleDetector.immunityEnded-=DesaplicarEfeitoImunidade;
+    }
+
+    void AplicarEfeitoImunidade()
+    {
+        spriteRenderer.color = new Color(0.6f,0.6f,0.6f,1);
+    }
+
+    void DesaplicarEfeitoImunidade()
+    {
+        spriteRenderer.color = new Color(1,1,1,1);
+    }
+
 }

@@ -8,7 +8,7 @@ public class GameManager : MonoBehaviour
     public static GameManager Instance {get; private set;}
 
     public int Score {get; private set;}
-    public int ScoredNow {get; private set;}
+    public int ScoredNow => Score - scoreAtTheStart;
     public int Aliquota => aliquota;
     public int CiclesToGo => cenarios.Count - cenariosPercorridos;
     public event UnityAction levelStarted = delegate {};
@@ -22,6 +22,8 @@ public class GameManager : MonoBehaviour
     int cenariosPercorridos = 0;
     int aliquota = 5000;
     public bool BrokeRecord {get; private set;}
+    int scoreAtTheStart;
+
 
     string[] personagens = {
         "Puffles", //gato - 0
@@ -40,10 +42,14 @@ public class GameManager : MonoBehaviour
         {
             Instance = this;
             DontDestroyOnLoad(gameObject);
-            foreach (string personagem in personagens)
+            for (int i = 0; i < personagens.Length; i++)
             {
-                recordes[personagem] = GetRecord(personagem);
+                recordes[personagens[i]] = GetRecord(i);
             }
+            // foreach (string personagem in personagens)
+            // {
+            //     recordes[personagem] = GetRecord(personagem);
+            // }
             foreach (string p in recordes.Keys)
             {
                 Debug.Log($"{p} -- {recordes[p]}");
@@ -67,9 +73,9 @@ public class GameManager : MonoBehaviour
         return false;
     }
 
-    public int GetRecord(string personagem)
+    public int GetRecord(int idPersonagem)
     {
-        return PlayerPrefs.GetInt($"Recorde_{personagem}");
+        return PlayerPrefs.GetInt($"Recorde_{personagens[idPersonagem]}");
     }
 
     public void StartRun(int idPersonagem)
@@ -83,6 +89,7 @@ public class GameManager : MonoBehaviour
         }
         IdPersonagemAtual = idPersonagem;
         Score = 0;
+        scoreAtTheStart = 0;
         aliquota = 5000;
         BrokeRecord = false;
         StartNewLevel();
@@ -90,8 +97,6 @@ public class GameManager : MonoBehaviour
 
     public void StartNewLevel()
     {
-        ScoredNow = 0;
-        sequenciaAtual = 0;
         if (cenariosPercorridos >= cenarios.Count)
         {
             if (Score < aliquota)
@@ -113,6 +118,8 @@ public class GameManager : MonoBehaviour
                 cenarios[randomIndex] = temp;
             }
         }
+        sequenciaAtual = 0;
+        scoreAtTheStart = Score;
         SceneManager.LoadScene(cenarios[cenariosPercorridos]);
         cenariosPercorridos++;
         levelStarted.Invoke();
@@ -129,7 +136,6 @@ public class GameManager : MonoBehaviour
         sequenciaAtual = 0;
         coletadosAtualMudou.Invoke(sequenciaAtual);
         int totalDecrease = prevScore - Score;
-        ScoredNow -= totalDecrease;
         scoreDecreased.Invoke(totalDecrease);
         scoreChanged.Invoke(Score);
     }
@@ -148,7 +154,6 @@ public class GameManager : MonoBehaviour
             totalIncrease = amount * 5 + Mathf.RoundToInt(amount*5 * (0.1f*(sequenciaAtual-3)));
         }
         Score += totalIncrease;
-        ScoredNow += totalIncrease;
         sequenciaAtual++;
         coletadosAtualMudou.Invoke(sequenciaAtual);
         scoreIncreased.Invoke(totalIncrease);
@@ -160,7 +165,6 @@ public class GameManager : MonoBehaviour
         BrokeRecord = SaveRecord(NomePersonagemAtual, Score);
         sequenciaAtual = 0;
         cenariosPercorridos = 0;
-        ScoredNow = 0;
         // Score = 0;
         foreach (string p in recordes.Keys)
         {

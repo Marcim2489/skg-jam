@@ -333,6 +333,7 @@ MonoBehaviour:
   dustPoint: {fileID: 7343182840157417541}
   dustInterval: 0.08
   particlesPerStep: 3
+  obstacleDetector: {fileID: 1364157179146830555}
 --- !u!50 &622155060268079779
 Rigidbody2D:
   serializedVersion: 5
