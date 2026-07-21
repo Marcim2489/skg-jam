@@ -8,8 +8,8 @@ public class Laser : MonoBehaviour
     [SerializeField]float timeToShoot = 2.2f;
     [SerializeField]float laserDuration = 0.6f;
     [SerializeField]LayerMask wallLayer;
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
     Transform laserInstance;
+
     void Start()
     {
         StartCoroutine(Shoot());
