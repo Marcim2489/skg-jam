@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class LevelManager : MonoBehaviour
 {
@@ -8,6 +9,7 @@ public class LevelManager : MonoBehaviour
     [SerializeField]float timeLeft = 5;
     Collectable[] coletaveis;
     Collectable ultimoEscolhido;
+    public event UnityAction timeUp = delegate {};
 
     public float TimeLeft => timeLeft;
     bool ended = false;
