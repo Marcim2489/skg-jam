@@ -1,4 +1,3 @@
-using System.Security.Cryptography;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -52,7 +51,6 @@ public class PlayerController : MonoBehaviour
             spriteRenderer.flipX = true;
             dustPoint.localPosition = new Vector3(0.12f, -0.18f, 0);
         }
-    }
 
         // Emissão de poeira
         if (moving)
@@ -70,7 +68,7 @@ public class PlayerController : MonoBehaviour
             dustTimer = dustInterval;
         }
     }
-}
+
     void OnDestroy()
     {
         obstacleDetector.immunityStarted-=AplicarEfeitoImunidade;
