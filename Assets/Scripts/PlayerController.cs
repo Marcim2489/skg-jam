@@ -7,6 +7,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private float velocidade = 50f;
     [SerializeField] private Rigidbody2D rb;
     [SerializeField] private InputAction movement;
+    [SerializeField] private InputAction interactPressed;
 
     [Header("Visual")]
     [SerializeField] private Animator animator;
@@ -22,15 +23,22 @@ public class PlayerController : MonoBehaviour
     private float dustTimer;
     [SerializeField]ObstacleDetector obstacleDetector;
 
-    void Start()
-    {
-        movement.Enable();
-        // obstacleDetector.immunityStarted+=AplicarEfeitoImunidade;
-        // obstacleDetector.immunityEnded+=DesaplicarEfeitoImunidade;
-    }
+   private void OnEnable()
+{
+    movement.Enable();
+    interactPressed.Enable();
+}
+
+private void OnDisable()
+{
+    movement.Disable();
+    interactPressed.Disable();
+}
 
     void Update()
     {
+
+        
         Vector2 direcao = movement.ReadValue<Vector2>();
 
         // Movimento
@@ -67,6 +75,19 @@ public class PlayerController : MonoBehaviour
         {
             dustTimer = dustInterval;
         }
+
+        if (interactPressed.WasPressedThisFrame())
+        {
+            
+            if(currentButton != null)
+            {
+                currentButton.Press();
+            }
+}
+
+        
+
+        
     }
 
     // void OnDestroy()
@@ -84,5 +105,29 @@ public class PlayerController : MonoBehaviour
     {
         spriteRenderer.color = new Color(1,1,1,1);
     }
+
+    MenuButton currentButton;
+
+private void OnTriggerEnter2D(Collider2D other)
+{
+    if (other.TryGetComponent(out MenuButton button))
+    {
+        currentButton = button;
+        currentButton.Select();
+    }
+}
+
+private void OnTriggerExit2D(Collider2D other)
+{
+    if (other.TryGetComponent(out MenuButton button) && currentButton == button)
+    {
+        currentButton.Deselect();
+        currentButton = null;
+    }
+}
+
+
+
+
 
 }
