@@ -82,6 +82,7 @@ public class GameManager : MonoBehaviour
     {
         for (int i = 0; i < cenarios.Count; i++)
         {
+            
             int randomIndex = Random.Range(0, cenarios.Count);
             string temp = cenarios[i];
             cenarios[i] = cenarios[randomIndex];
