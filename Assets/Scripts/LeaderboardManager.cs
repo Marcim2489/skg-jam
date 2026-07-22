@@ -19,6 +19,7 @@ public class LeaderboardManager : MonoBehaviour
 
     private async void Start()
     {
+        adderButton.interactable = false;
         for (int i = 0; i  < entries.Length; i++)
         {
             entries[i].gameObject.SetActive(false);
@@ -42,6 +43,7 @@ public class LeaderboardManager : MonoBehaviour
         {
             Debug.LogError($"Initialization failed: {e.Message}");
         }
+        adderButton.interactable = true;
     }
 
     public async void AddScoreAsync()
@@ -50,13 +52,14 @@ public class LeaderboardManager : MonoBehaviour
         string username = inputField.text;
         if (username.Equals("") || username == null)
         {
+            adderButton.interactable = true;
             return;
         }
         if (username.Length > 10)
         {
             username = username.Substring(0, 10);
         }
-
+        inputField.text = "";
         int bestCharacter;
         int gatoRecord = GameManager.Instance.GetRecord(0);
         int cachorroRecord = GameManager.Instance.GetRecord(1);
