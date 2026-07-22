@@ -1,5 +1,6 @@
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class CharacterSelectorManager : MonoBehaviour
 {
@@ -16,6 +17,11 @@ public class CharacterSelectorManager : MonoBehaviour
     public void Play(int charId)
     {
         GameManager.Instance.StartRun(charId);
+    }
+
+    public void a()
+    {
+        SceneManager.LoadScene("Leaderboard");
     }
 
 }

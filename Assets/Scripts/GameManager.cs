@@ -42,6 +42,8 @@ public class GameManager : MonoBehaviour
         {
             Instance = this;
             DontDestroyOnLoad(gameObject);
+            PlayerPrefs.SetInt($"Recorde_Puffles", 12000);
+            PlayerPrefs.SetInt($"Recorde_Cachorro", 13000);
             for (int i = 0; i < personagens.Length; i++)
             {
                 recordes[personagens[i]] = GetRecord(i);
