@@ -6,13 +6,14 @@ using Unity.Services.Leaderboards;
 using Unity.Services.Core;
 using Unity.Services.Authentication;
 using System;
+using UnityEngine.SceneManagement;
 // using 
 
 
 
 // public override void Initialize()
 // {
-    
+
 // }
 [System.Serializable]
 public class ScoreMetadata
@@ -227,6 +228,12 @@ public class LeaderboardManager : MonoBehaviour
     //     //     GetLeaderboard();
     //     // }));
     // }
+
+
+    public void BackToMenu()
+    {
+        SceneManager.LoadScene("Menu");
+    }
 
     public void DisplayScore(int charId)
     {
