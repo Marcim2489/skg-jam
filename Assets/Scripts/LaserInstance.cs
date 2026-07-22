@@ -7,7 +7,7 @@ public class LaserInstance : MonoBehaviour
 
     public void ManageSize(float size)
     {
-        Vector2 newSize = new Vector2(1, size);
+        Vector2 newSize = new Vector2(0.5f, size);
         spriteRenderer.size = newSize;
         boxCollider.size = newSize;
     }

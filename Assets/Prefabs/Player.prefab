@@ -77,9 +77,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 158c66f3497445c44a434d95ab595de4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ObstacleDetector
-  immunityTime: 1
-  colliders:
-  - {fileID: 3433666395905486573}
 --- !u!61 &3433666395905486573
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -237,7 +234,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerController
   velocidade: 13.5
-  rb: {fileID: 622155060268079779}
+  rigidBody: {fileID: 622155060268079779}
   movement:
     m_Name: Movement
     m_Type: 0

@@ -54,6 +54,7 @@ public class GameManager : MonoBehaviour
             {
                 Debug.Log($"{p} -- {recordes[p]}");
             }
+            IdPersonagemAtual = 0;
             return;
         }
         else
