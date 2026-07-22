@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: a47b2f04310126b418bc8da114d7fa26
+guid: acdcfa050e63551468b41378d79343cd
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 343754167770914275
-    second: "Bot\xE3oPlay_0"
+      213: -557450374029725830
+    second: Ranking_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,23 +100,23 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: "Bot\xE3oPlay_0"
+      name: Ranking_0
       rect:
         serializedVersion: 2
-        x: 61
+        x: 26
         y: 83
-        width: 77
-        height: 56
-      alignment: 9
-      pivot: {x: 0.5, y: 0.99}
+        width: 147
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 3ed9b04289245c400800000000000000
-      internalID: 343754167770914275
+      spriteID: a7fac0c96d98348f0800000000000000
+      internalID: -557450374029725830
       vertices: []
       indices: 
       edges: []
@@ -125,7 +125,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: a4aaf0dd80d6e9447bb3601258dc3032
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -135,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      "Bot\xE3oPlay_0": 343754167770914275
+      Ranking_0: -557450374029725830
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
