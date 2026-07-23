@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 5708201282039841866}
   - component: {fileID: 9038978264274073718}
   - component: {fileID: 5835704390049665312}
+  - component: {fileID: 1562496411525917506}
   m_Layer: 0
   m_Name: Coletavel
   m_TagString: Untagged
@@ -154,3 +155,18 @@ CapsuleCollider2D:
   m_Offset: {x: 0, y: 0}
   m_Size: {x: 1, y: 0.64}
   m_Direction: 1
+--- !u!114 &1562496411525917506
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1865891590165694449}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 22413d8e3e862fd45a86c6b4346a100e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::FloatingObject
+  altura: 0.1
+  velocidade: 2
+  rotacao: 3
