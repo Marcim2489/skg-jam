@@ -1858,7 +1858,7 @@ GameObject:
   - component: {fileID: 631474142}
   - component: {fileID: 631474141}
   - component: {fileID: 631474144}
-  - component: {fileID: 631474143}
+  - component: {fileID: 631474146}
   - component: {fileID: 631474145}
   m_Layer: 0
   m_Name: CabecaGato_0
@@ -1941,22 +1941,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1441403062}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &631474143
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 631474140}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 103a785ddcfd5d6428a963a6c0656709, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::MenuButton
-  spriteRenderer: {fileID: 631474141}
-  normalColor: {r: 1, g: 1, b: 1, a: 1}
-  selectedColor: {r: 1, g: 0.9647059, b: 0.7411765, a: 1}
-  selectedScale: 1.15
 --- !u!114 &631474144
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2018,6 +2002,23 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1.875, y: 1.71875}
   m_EdgeRadius: 0
+--- !u!114 &631474146
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 631474140}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cfbff78fc95242f438d13b06b4bc4b30, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SwitchCharacterButton
+  spriteRenderer: {fileID: 631474141}
+  normalColor: {r: 1, g: 1, b: 1, a: 1}
+  selectedColor: {r: 1, g: 0.9647059, b: 0.7411765, a: 1}
+  selectedScale: 1.15
+  characterId: 0
 --- !u!1 &652415893
 GameObject:
   m_ObjectHideFlags: 0
@@ -3210,7 +3211,7 @@ GameObject:
   - component: {fileID: 997943772}
   - component: {fileID: 997943771}
   - component: {fileID: 997943774}
-  - component: {fileID: 997943773}
+  - component: {fileID: 997943776}
   - component: {fileID: 997943775}
   m_Layer: 0
   m_Name: CabecaDOGo_0
@@ -3293,22 +3294,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1441403062}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &997943773
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 997943770}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 103a785ddcfd5d6428a963a6c0656709, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::MenuButton
-  spriteRenderer: {fileID: 997943771}
-  normalColor: {r: 1, g: 1, b: 1, a: 1}
-  selectedColor: {r: 1, g: 0.9647059, b: 0.7411765, a: 1}
-  selectedScale: 1.15
 --- !u!114 &997943774
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3370,6 +3355,23 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1.875, y: 1.71875}
   m_EdgeRadius: 0
+--- !u!114 &997943776
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 997943770}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cfbff78fc95242f438d13b06b4bc4b30, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SwitchCharacterButton
+  spriteRenderer: {fileID: 631474141}
+  normalColor: {r: 1, g: 1, b: 1, a: 1}
+  selectedColor: {r: 1, g: 0.9647059, b: 0.7411765, a: 1}
+  selectedScale: 1.15
+  characterId: 1
 --- !u!1 &1054841893
 GameObject:
   m_ObjectHideFlags: 0

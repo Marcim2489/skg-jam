@@ -8,7 +8,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private float velocidade = 50f;
     [SerializeField] private Rigidbody2D rb;
     [SerializeField] private InputAction movement;
-    [SerializeField] private InputAction interactPressed;
+    [SerializeField] private InputAction interact;
 
     [Header("Visual")]
     [SerializeField] private Animator animator;
@@ -22,6 +22,8 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private float dustInterval = 0.12f;
     [SerializeField] private int particlesPerStep = 3;
     [SerializeField]float jumpForce = 0.1f;
+    [SerializeField]float jumpPeakDuration = 0.1f;
+    [SerializeField]float jumpHeight = 1f;
     [SerializeField]ObstacleDetector hurtbox;
 
     private float dustTimer;
@@ -29,6 +31,19 @@ public class PlayerController : MonoBehaviour
     MenuButton currentButton;
 
     Vector2 Direcao => movement.ReadValue<Vector2>();
+    float VelocidadeTotal
+    {
+        get
+        {
+            bool pressed = interact.IsPressed();
+            if (gatoSelecionado || pressed == false)
+            {
+                return velocidade;
+            }
+            return velocidade * 1.5f;
+        }
+    }
+
 
     bool pulando = false;
     bool gatoSelecionado = false;
@@ -36,38 +51,29 @@ public class PlayerController : MonoBehaviour
     private void OnEnable()
     {
         movement.Enable();
-        interactPressed.Enable();
+        interact.Enable();
     }
 
     private void OnDisable()
     {
         movement.Disable();
-        interactPressed.Disable();
+        interact.Disable();
+        GameManager.Instance.trocouPersonagem-=SetCharacter;
     }
 
     void Start()
     {
-        if (GameManager.Instance.IdPersonagemAtual == 0)
-        {
-            gatoSelecionado = true;
-            spriteRendererGato.gameObject.SetActive(true);
-            spriteRendererCachorro.gameObject.SetActive(false);
-        }
-        else
-        {
-            gatoSelecionado = false;
-            spriteRendererGato.gameObject.SetActive(false);
-            spriteRendererCachorro.gameObject.SetActive(true);
-        }
+        SetCharacter(GameManager.Instance.IdPersonagemAtual);
+        GameManager.Instance.trocouPersonagem+=SetCharacter;
     }
 
     void Update()
     {
         // Movimento
-        rb.linearVelocity = Direcao.normalized * velocidade;
+        rb.linearVelocity = Direcao.normalized * VelocidadeTotal;
 
         // Animação
-        bool moving = Direcao.sqrMagnitude > 0.01f;
+        bool moving = Direcao != Vector2.zero;
         animator.SetBool("moving", moving);
 
         // Virar sprite
@@ -100,32 +106,37 @@ public class PlayerController : MonoBehaviour
             dustTimer = dustInterval;
         }
 
-        if (interactPressed.WasPressedThisFrame())
+        if (interact.WasPressedThisFrame() && pulando==false)
         {
+            if(currentButton != null)
+            {
+                currentButton.Press();
+                return;
+            }
             if (gatoSelecionado && pulando == false)
             {
                 StartCoroutine(Jump());
                 return;
             }
-            if(currentButton != null)
-            {
-                currentButton.Press();
-            }
         }
     }
-
 
     IEnumerator Jump()
     {
         pulando = true;
         animator.Play("PlayerJump");
         hurtbox.gameObject.SetActive(false);
-        while((spriteRendererGato.transform.position.y - transform.position.y) <= 1f)
+        while((spriteRendererGato.transform.position.y - transform.position.y) <= jumpHeight)
         {
             spriteRendererGato.transform.position += Vector3.up * jumpForce;
             yield return null;
         }
-        yield return new WaitForSeconds(0.1f);
+
+        if(jumpPeakDuration > 0)
+        {
+            yield return new WaitForSeconds(jumpPeakDuration);
+        }
+
         while((spriteRendererGato.transform.position.y - transform.position.y) >= 0f)
         {
             spriteRendererGato.transform.position -= Vector3.up * jumpForce;
@@ -146,6 +157,22 @@ public class PlayerController : MonoBehaviour
         }
         hurtbox.gameObject.SetActive(true);
         pulando = false;
+    }
+
+    public void SetCharacter(int charId)
+    {
+        if (charId == 0)
+        {
+            gatoSelecionado = true;
+            spriteRendererGato.gameObject.SetActive(true);
+            spriteRendererCachorro.gameObject.SetActive(false);
+        }
+        else
+        {
+            gatoSelecionado = false;
+            spriteRendererGato.gameObject.SetActive(false);
+            spriteRendererCachorro.gameObject.SetActive(true);
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D other)

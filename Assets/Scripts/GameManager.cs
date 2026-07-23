@@ -32,6 +32,7 @@ public class GameManager : MonoBehaviour
         };
 
     public int IdPersonagemAtual {get; private set;}
+    public event UnityAction<int> trocouPersonagem = delegate{};
     public string NomePersonagemAtual => personagens[IdPersonagemAtual];
     public int SequenciaAtual => sequenciaAtual;
 
@@ -80,7 +81,7 @@ public class GameManager : MonoBehaviour
         return PlayerPrefs.GetInt($"Recorde_{personagens[idPersonagem]}");
     }
 
-    public void StartRun(int idPersonagem)
+    public void StartRun()
     {
         for (int i = 0; i < cenarios.Count; i++)
         {
@@ -90,7 +91,7 @@ public class GameManager : MonoBehaviour
             cenarios[i] = cenarios[randomIndex];
             cenarios[randomIndex] = temp;
         }
-        IdPersonagemAtual = idPersonagem;
+        // IdPersonagemAtual = idPersonagem;
         Score = 0;
         scoreAtTheStart = 0;
         // aliquota = 5000;
@@ -180,9 +181,10 @@ public class GameManager : MonoBehaviour
         StartCoroutine(SceneTransitionManager.Instance.ChangeScene("Game over"));
     }
 
-    
-
-
-    
+    public void SwitchCharacter(int charId)
+    {
+        IdPersonagemAtual = charId;
+        trocouPersonagem.Invoke(IdPersonagemAtual);
+    }
 }
 

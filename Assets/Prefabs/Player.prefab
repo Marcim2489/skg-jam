@@ -267,21 +267,21 @@ MonoBehaviour:
       m_Action: Movement
       m_Flags: 8
     m_Flags: 0
-  interactPressed:
-    m_Name: Interact Pressed
-    m_Type: 1
-    m_ExpectedControlType: Button
-    m_Id: cea278f4-bf67-48e8-aa2d-3e3082fd36b0
+  interact:
+    m_Name: Interact
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: 61db4853-4bd1-49bb-a698-242d5480944c
     m_Processors: 
     m_Interactions: 
     m_SingletonActionBindings:
     - m_Name: 
-      m_Id: 380cf15f-22b9-4053-be9a-e94c93655de8
+      m_Id: 4c5aec3f-5957-4cf6-bd10-3238a0cae965
       m_Path: <Keyboard>/space
-      m_Interactions: Press
+      m_Interactions: 
       m_Processors: 
       m_Groups: 
-      m_Action: Interact Pressed
+      m_Action: Interact
       m_Flags: 0
     m_Flags: 0
   animator: {fileID: 3447302725960583457}
@@ -292,8 +292,9 @@ MonoBehaviour:
   dustInterval: 0.08
   particlesPerStep: 3
   jumpForce: 0.1
+  jumpPeakDuration: 0.1
+  jumpHeight: 1
   hurtbox: {fileID: 1364157179146830555}
-  obstacleDetector: {fileID: 1364157179146830555}
 --- !u!50 &622155060268079779
 Rigidbody2D:
   serializedVersion: 5
