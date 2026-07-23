@@ -1,20 +1,17 @@
 using UnityEngine;
 using UnityEngine.Audio;
+using UnityEngine.Events;
 
 
 public class SoundSettings : MonoBehaviour
 {
+    public static SoundSettings Instance {get; private set;}
 
     [Header("Mixer")]
     [SerializeField] private AudioMixer mixer;
 
-
-    [Header("Dots")]
-    [SerializeField] private VolumeDot[] dots;
-
-
-    private int volumeLevel = 5;
-
+    private int volumeLevel = 3;
+    public int VolumeLevel => volumeLevel;
 
     private float[] volumeValues =
     {
@@ -25,13 +22,25 @@ public class SoundSettings : MonoBehaviour
         -5f,
         0f
     };
+    public float[] VolumeValues => volumeValues;
 
+    public event UnityAction volumeUpdated = delegate {};
+
+    void Awake()
+    {
+        if(Instance == null)
+        {
+            Instance = this;
+            DontDestroyOnLoad(gameObject);
+            return;
+        }
+        Destroy(gameObject);
+    }
 
     void Start()
     {
         UpdateVolume();
     }
-
 
     public void IncreaseVolume()
     {
@@ -42,8 +51,6 @@ public class SoundSettings : MonoBehaviour
         }
     }
 
-
-
     public void DecreaseVolume()
     {
         if(volumeLevel > 0)
@@ -53,36 +60,13 @@ public class SoundSettings : MonoBehaviour
         }
     }
 
-
-
     private void UpdateVolume()
     {
-
         mixer.SetFloat(
             "MasterVolume",
             volumeValues[volumeLevel]
         );
-
-
-        UpdateDots();
-    }
-
-
-
-    private void UpdateDots()
-    {
-
-        for(int i = 0; i < dots.Length; i++)
-        {
-
-            if(i < volumeLevel)
-                dots[i].SetState(true);
-
-            else
-                dots[i].SetState(false);
-
-        }
-
+        volumeUpdated.Invoke();
     }
 
 }

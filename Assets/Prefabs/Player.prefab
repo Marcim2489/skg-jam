@@ -137,6 +137,7 @@ GameObject:
   - component: {fileID: 622155060268079779}
   - component: {fileID: 4389494785686453371}
   - component: {fileID: 3447302725960583457}
+  - component: {fileID: 8980007169691005164}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -209,7 +210,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_MaskInteraction: 0
   m_Sprite: {fileID: -1336864005957472621, guid: 789f17e92e8402146829e0d0cc52df51, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -234,7 +235,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerController
   velocidade: 13.5
-  rigidBody: {fileID: 622155060268079779}
+  rb: {fileID: 622155060268079779}
   movement:
     m_Name: Movement
     m_Type: 0
@@ -324,6 +325,23 @@ MonoBehaviour:
       m_Action: Movement
       m_Flags: 8
     m_Flags: 0
+  interactPressed:
+    m_Name: Interact Pressed
+    m_Type: 1
+    m_ExpectedControlType: Button
+    m_Id: cea278f4-bf67-48e8-aa2d-3e3082fd36b0
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings:
+    - m_Name: 
+      m_Id: 380cf15f-22b9-4053-be9a-e94c93655de8
+      m_Path: <Keyboard>/space
+      m_Interactions: Press
+      m_Processors: 
+      m_Groups: 
+      m_Action: Interact Pressed
+      m_Flags: 0
+    m_Flags: 0
   animator: {fileID: 3447302725960583457}
   spriteRenderer: {fileID: 6819601231446575268}
   runDust: {fileID: 8391412325042169358}
@@ -388,7 +406,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
@@ -426,6 +444,14 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!81 &8980007169691005164
+AudioListener:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2967142787375554720}
+  m_Enabled: 1
 --- !u!1 &3262049361329823193
 GameObject:
   m_ObjectHideFlags: 0
@@ -5341,7 +5367,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_MaskInteraction: 0
   m_Sprite: {fileID: -114595351847970599, guid: be90fa7cc79c29d448d889e0534ef3a1, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}

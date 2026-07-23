@@ -18,14 +18,27 @@ public class BackgroundMusicPlayer : MonoBehaviour
 
     void Start()
     {
-        if (Instance != null && Instance.MusicPlayer.clip.Equals(musicPlayer.clip))
+        if (Instance != this && Instance != null && Instance.MusicPlayer.clip.Equals(musicPlayer.clip))
         {
             Destroy(gameObject);
+            return;
         }
         else
         {
             Instance = this;
             DontDestroyOnLoad(gameObject);
         }
+        // SoundSettings.Instance.volumeUpdated+=UpdateVolume;
+        // UpdateVolume();
+    }
+
+    void UpdateVolume()
+    {
+        // musicPlayer.volume = SoundSettings.Instance.VolumeValues[SoundSettings.Instance.VolumeLevel];
+    }
+
+    void OnDestroy()
+    {
+        // SoundSettings.Instance.volumeUpdated-=UpdateVolume;
     }
 }

@@ -1,8 +1,5 @@
 using UnityEngine;
 
-
-using UnityEngine.SceneManagement;
-
 public class MenuButton : MonoBehaviour
 {
      [SerializeField] private SpriteRenderer spriteRenderer;

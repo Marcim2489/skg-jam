@@ -22,6 +22,7 @@ public class PlayerController : MonoBehaviour
 
     private float dustTimer;
     [SerializeField]ObstacleDetector obstacleDetector;
+    MenuButton currentButton;
 
    private void OnEnable()
 {
@@ -37,8 +38,6 @@ private void OnDisable()
 
     void Update()
     {
-
-        
         Vector2 direcao = movement.ReadValue<Vector2>();
 
         // Movimento
@@ -83,51 +82,28 @@ private void OnDisable()
             {
                 currentButton.Press();
             }
-}
-
-        
-
-        
+        }
     }
 
-    // void OnDestroy()
-    // {
-    //     obstacleDetector.immunityStarted-=AplicarEfeitoImunidade;
-    //     obstacleDetector.immunityEnded-=DesaplicarEfeitoImunidade;
-    // }
-
-    void AplicarEfeitoImunidade()
+    private void OnTriggerEnter2D(Collider2D other)
     {
-        spriteRenderer.color = new Color(0.6f,0.6f,0.6f,1);
+        if (other.TryGetComponent(out MenuButton button))
+        {
+            currentButton = button;
+            currentButton.Select();
+        }
     }
 
-    void DesaplicarEfeitoImunidade()
+    private void OnTriggerExit2D(Collider2D other)
     {
-        spriteRenderer.color = new Color(1,1,1,1);
+        if (other.TryGetComponent(out MenuButton button))
+        {
+            button.Deselect();
+            if (currentButton == button)
+            {
+                currentButton = null;
+            }
+        }
     }
-
-    MenuButton currentButton;
-
-private void OnTriggerEnter2D(Collider2D other)
-{
-    if (other.TryGetComponent(out MenuButton button))
-    {
-        currentButton = button;
-        currentButton.Select();
-    }
-}
-
-private void OnTriggerExit2D(Collider2D other)
-{
-    if (other.TryGetComponent(out MenuButton button) && currentButton == button)
-    {
-        currentButton.Deselect();
-        currentButton = null;
-    }
-}
-
-
-
-
 
 }
