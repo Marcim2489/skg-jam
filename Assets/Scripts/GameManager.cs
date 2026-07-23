@@ -32,6 +32,7 @@ public class GameManager : MonoBehaviour
         };
 
     public int IdPersonagemAtual {get; private set;}
+    public event UnityAction<int> trocouPersonagem = delegate{};
     public string NomePersonagemAtual => personagens[IdPersonagemAtual];
     public int SequenciaAtual => sequenciaAtual;
 
@@ -80,7 +81,7 @@ public class GameManager : MonoBehaviour
         return PlayerPrefs.GetInt($"Recorde_{personagens[idPersonagem]}");
     }
 
-    public void StartRun(int idPersonagem)
+    public void StartRun()
     {
         for (int i = 0; i < cenarios.Count; i++)
         {
@@ -90,7 +91,7 @@ public class GameManager : MonoBehaviour
             cenarios[i] = cenarios[randomIndex];
             cenarios[randomIndex] = temp;
         }
-        IdPersonagemAtual = idPersonagem;
+        // IdPersonagemAtual = idPersonagem;
         Score = 0;
         scoreAtTheStart = 0;
         // aliquota = 5000;
@@ -123,7 +124,9 @@ public class GameManager : MonoBehaviour
         }
         sequenciaAtual = 0;
         scoreAtTheStart = Score;
-        SceneManager.LoadScene(cenarios[cenariosPercorridos]);
+        // SceneManager.LoadScene(cenarios[cenariosPercorridos]);
+        SceneTransitionManager.Instance.ChangeScene(cenarios[cenariosPercorridos]);
+        // SceneTransitionManager.Instance.ChangeScene(cenarios[cenariosPercorridos]);
         cenariosPercorridos++;
         levelStarted.Invoke();
     }
@@ -174,12 +177,14 @@ public class GameManager : MonoBehaviour
         {
             Debug.Log($"{p} -- {recordes[p]}");
         }
-        SceneManager.LoadScene("Game over");
+        // SceneManager.LoadScene("Game over");
+        SceneTransitionManager.Instance.ChangeScene("Game over");
     }
 
-    
-
-
-    
+    public void SwitchCharacter(int charId)
+    {
+        IdPersonagemAtual = charId;
+        trocouPersonagem.Invoke(IdPersonagemAtual);
+    }
 }
 

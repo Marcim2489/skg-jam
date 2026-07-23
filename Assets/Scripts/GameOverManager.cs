@@ -17,7 +17,7 @@ public class GameOverManager : MonoBehaviour
 
     public void Retry()
     {
-        GameManager.Instance.StartRun(0);
+        GameManager.Instance.StartRun();
     }
 
     public void BackToMenu()

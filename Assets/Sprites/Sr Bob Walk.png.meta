@@ -1,10 +1,19 @@
 fileFormatVersion: 2
-guid: 1a0dd95930c56724aab32d84671ca9f3
+guid: 9106b31fb30e6524aa50b936f2d64956
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -6128095244407038750
-    second: ArvoreCopas2_0
+      213: -1479153362711567398
+    second: Sr Bob Walk_0
+  - first:
+      213: 4234014805102763320
+    second: Sr Bob Walk_1
+  - first:
+      213: -1940755006107632873
+    second: Sr Bob Walk_2
+  - first:
+      213: 2064392025588047373
+    second: Sr Bob Walk_3
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -24,7 +33,7 @@ TextureImporter:
     heightScale: 0.25
     normalMapFilter: 0
     flipGreenChannel: 0
-  isReadable: 1
+  isReadable: 0
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
@@ -75,7 +84,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -126,23 +135,89 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: ArvoreCopas2_0
+      name: Sr Bob Walk_0
       rect:
         serializedVersion: 2
-        x: 2
-        y: 16
-        width: 58
-        height: 62
+        x: 0
+        y: 0
+        width: 32
+        height: 32
       alignment: 9
-      pivot: {x: 0.5, y: 0.2}
+      pivot: {x: 0.51500005, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 2ec9b5fd7d1a4faa0800000000000000
-      internalID: -6128095244407038750
+      spriteID: ad3a04f7addf87be0800000000000000
+      internalID: -1479153362711567398
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sr Bob Walk_1
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 0
+        width: 32
+        height: 32
+      alignment: 9
+      pivot: {x: 0.5298983, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 83d15ef480e32ca30800000000000000
+      internalID: 4234014805102763320
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sr Bob Walk_2
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 0
+        width: 32
+        height: 32
+      alignment: 9
+      pivot: {x: 0.53057575, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 71bb4e0ca9d0115e0800000000000000
+      internalID: -1940755006107632873
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sr Bob Walk_3
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 0
+        width: 32
+        height: 32
+      alignment: 9
+      pivot: {x: 0.5302141, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d0e13521c9136ac10800000000000000
+      internalID: 2064392025588047373
       vertices: []
       indices: 
       edges: []
@@ -151,7 +226,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 1ff10047e70c0d94c9b30c4c578f245a
+    spriteID: 02dc509ec07f31247b2b882af5a3da3b
     internalID: 0
     vertices: []
     indices: 
@@ -159,9 +234,14 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     spriteCustomMetadata:
-      entries: []
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":4.0,"y":1.0},"gridSpriteSize":{"x":32.0,"y":32.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":2,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
-      ArvoreCopas2_0: -6128095244407038750
+      Sr Bob Walk_0: -1479153362711567398
+      Sr Bob Walk_1: 4234014805102763320
+      Sr Bob Walk_2: -1940755006107632873
+      Sr Bob Walk_3: 2064392025588047373
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

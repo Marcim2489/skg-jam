@@ -16,7 +16,7 @@ public class CharacterSelectorManager : MonoBehaviour
 
     public void Play(int charId)
     {
-        GameManager.Instance.StartRun(charId);
+        GameManager.Instance.StartRun();
     }
 
     public void a()

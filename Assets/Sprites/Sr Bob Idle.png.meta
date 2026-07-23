@@ -1,10 +1,13 @@
 fileFormatVersion: 2
-guid: 1a0dd95930c56724aab32d84671ca9f3
+guid: 2332a4e83e8d6c549bd6ab5294e08ad6
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -6128095244407038750
-    second: ArvoreCopas2_0
+      213: -9029969318573314272
+    second: Sr Bob Idle_0
+  - first:
+      213: 2230698470793189781
+    second: Sr Bob Idle_1
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -24,7 +27,7 @@ TextureImporter:
     heightScale: 0.25
     normalMapFilter: 0
     flipGreenChannel: 0
-  isReadable: 1
+  isReadable: 0
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
@@ -75,7 +78,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -126,23 +129,45 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: ArvoreCopas2_0
+      name: Sr Bob Idle_0
       rect:
         serializedVersion: 2
-        x: 2
-        y: 16
-        width: 58
-        height: 62
+        x: 0
+        y: 0
+        width: 32
+        height: 32
       alignment: 9
-      pivot: {x: 0.5, y: 0.2}
+      pivot: {x: 0.53125006, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 2ec9b5fd7d1a4faa0800000000000000
-      internalID: -6128095244407038750
+      spriteID: 02fe2c16fba1fa280800000000000000
+      internalID: -9029969318573314272
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sr Bob Idle_1
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 0
+        width: 32
+        height: 32
+      alignment: 9
+      pivot: {x: 0.5308845, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 59992a0c07805fe10800000000000000
+      internalID: 2230698470793189781
       vertices: []
       indices: 
       edges: []
@@ -151,7 +176,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 1ff10047e70c0d94c9b30c4c578f245a
+    spriteID: 623203cff9928a946a2b3d8dfa5b0c14
     internalID: 0
     vertices: []
     indices: 
@@ -159,9 +184,12 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     spriteCustomMetadata:
-      entries: []
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":2.0,"y":1.0},"gridSpriteSize":{"x":32.0,"y":32.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":2,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
-      ArvoreCopas2_0: -6128095244407038750
+      Sr Bob Idle_0: -9029969318573314272
+      Sr Bob Idle_1: 2230698470793189781
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

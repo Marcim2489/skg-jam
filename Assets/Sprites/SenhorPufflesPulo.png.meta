@@ -1,10 +1,13 @@
 fileFormatVersion: 2
-guid: 1a0dd95930c56724aab32d84671ca9f3
+guid: f92f4ce908cbb6c4381f6a2e8710a605
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -6128095244407038750
-    second: ArvoreCopas2_0
+      213: -708395126583259637
+    second: SenhorPufflesPulo_0
+  - first:
+      213: 2560695541222395736
+    second: SenhorPufflesPulo_1
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -24,7 +27,7 @@ TextureImporter:
     heightScale: 0.25
     normalMapFilter: 0
     flipGreenChannel: 0
-  isReadable: 1
+  isReadable: 0
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
@@ -75,7 +78,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -126,23 +129,45 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: ArvoreCopas2_0
+      name: SenhorPufflesPulo_0
       rect:
         serializedVersion: 2
-        x: 2
-        y: 16
-        width: 58
-        height: 62
-      alignment: 9
-      pivot: {x: 0.5, y: 0.2}
+        x: 3
+        y: 6
+        width: 24
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 2ec9b5fd7d1a4faa0800000000000000
-      internalID: -6128095244407038750
+      spriteID: b0e0367b2664b26f0800000000000000
+      internalID: -708395126583259637
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SenhorPufflesPulo_1
+      rect:
+        serializedVersion: 2
+        x: 39
+        y: 2
+        width: 20
+        height: 27
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 85fcc70170b698320800000000000000
+      internalID: 2560695541222395736
       vertices: []
       indices: 
       edges: []
@@ -151,7 +176,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 1ff10047e70c0d94c9b30c4c578f245a
+    spriteID: 23dbad2e8f5d98647bd7ea2505ecd846
     internalID: 0
     vertices: []
     indices: 
@@ -161,7 +186,8 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      ArvoreCopas2_0: -6128095244407038750
+      SenhorPufflesPulo_0: -708395126583259637
+      SenhorPufflesPulo_1: 2560695541222395736
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

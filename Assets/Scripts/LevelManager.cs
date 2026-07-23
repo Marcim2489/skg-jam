@@ -43,8 +43,9 @@ public class LevelManager : MonoBehaviour
         if (timeLeft <= 0)
         {
             timeLeft = 0;
-            // GameManager.Instance.StartNewLevel();
-            CanvasManager.Instance.DisplayEndPanel();
+            GameManager.Instance.StartNewLevel();
+            // CanvasManager.Instance.DisplayEndPanel();
+            
             ended = true;
         }
     }
