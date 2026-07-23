@@ -23,12 +23,18 @@ public class SceneTransitionManager : MonoBehaviour
         Destroy(gameObject);
     }
 
-    public IEnumerator ChangeScene(string sceneName)
+    public void ChangeScene(string sceneName)
+    {
+        StartCoroutine(ChangeSceneCoroutine(sceneName));
+    }
+
+    public IEnumerator ChangeSceneCoroutine(string sceneName)
     {
         if (duringTransition)
         {
             yield break;
         }
+        Time.timeScale = 0;
         duringTransition = true;
         enterTransition.gameObject.SetActive(true);
         enterTransition.localScale = Vector3.zero;
@@ -47,6 +53,7 @@ public class SceneTransitionManager : MonoBehaviour
             }
             yield return null;
         }
+        Time.timeScale = 1;
         enterTransition.localScale = Vector3.zero;
         enterTransition.gameObject.SetActive(false);
         duringTransition = false;

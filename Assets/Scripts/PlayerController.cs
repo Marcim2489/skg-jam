@@ -25,7 +25,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField]float jumpPeakDuration = 0.1f;
     [SerializeField]float jumpHeight = 1f;
     [SerializeField]ObstacleDetector hurtbox;
-
+    [SerializeField]bool onGameOver = false;
     private float dustTimer;
     // [SerializeField]ObstacleDetector obstacleDetector;
     MenuButton currentButton;
@@ -36,7 +36,7 @@ public class PlayerController : MonoBehaviour
         get
         {
             bool pressed = interact.IsPressed();
-            if (gatoSelecionado || pressed == false)
+            if (gatoSelecionado || pressed == false || onGameOver)
             {
                 return velocidade;
             }
@@ -113,7 +113,7 @@ public class PlayerController : MonoBehaviour
                 currentButton.Press();
                 return;
             }
-            if (gatoSelecionado && pulando == false)
+            if (gatoSelecionado && pulando == false && onGameOver==false)
             {
                 StartCoroutine(Jump());
                 return;

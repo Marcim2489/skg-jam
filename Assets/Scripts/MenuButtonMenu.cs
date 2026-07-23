@@ -1,16 +1,9 @@
 using UnityEngine;
 
-public class MenuButtonMenu : MonoBehaviour
+public class MenuButtonMenu : MenuButton
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    public override void Press()
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        SceneTransitionManager.Instance.ChangeScene("Menu");
     }
 }

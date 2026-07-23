@@ -125,7 +125,7 @@ public class GameManager : MonoBehaviour
         sequenciaAtual = 0;
         scoreAtTheStart = Score;
         // SceneManager.LoadScene(cenarios[cenariosPercorridos]);
-        StartCoroutine(SceneTransitionManager.Instance.ChangeScene(cenarios[cenariosPercorridos]));
+        SceneTransitionManager.Instance.ChangeScene(cenarios[cenariosPercorridos]);
         // SceneTransitionManager.Instance.ChangeScene(cenarios[cenariosPercorridos]);
         cenariosPercorridos++;
         levelStarted.Invoke();
@@ -178,7 +178,7 @@ public class GameManager : MonoBehaviour
             Debug.Log($"{p} -- {recordes[p]}");
         }
         // SceneManager.LoadScene("Game over");
-        StartCoroutine(SceneTransitionManager.Instance.ChangeScene("Game over"));
+        SceneTransitionManager.Instance.ChangeScene("Game over");
     }
 
     public void SwitchCharacter(int charId)
