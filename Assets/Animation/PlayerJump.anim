@@ -6,7 +6,7 @@ AnimationClip:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: PlayerIdle
+  m_Name: PlayerJump
   serializedVersion: 7
   m_Legacy: 0
   m_Compressed: 0
@@ -21,22 +21,13 @@ AnimationClip:
   - serializedVersion: 2
     curve:
     - time: 0
-      value: {fileID: 3990132046285905232, guid: 89892f0de05fc094b90ffade8e6cf1d2, type: 3}
+      value: {fileID: 2560695541222395736, guid: f92f4ce908cbb6c4381f6a2e8710a605, type: 3}
     attribute: m_Sprite
     path: sprite gato
     classID: 212
     script: {fileID: 0}
     flags: 2
-  - serializedVersion: 2
-    curve:
-    - time: 0
-      value: {fileID: -1479153362711567398, guid: 9106b31fb30e6524aa50b936f2d64956, type: 3}
-    attribute: m_Sprite
-    path: sprite cachorro
-    classID: 212
-    script: {fileID: 0}
-    flags: 2
-  m_SampleRate: 5
+  m_SampleRate: 1
   m_WrapMode: 0
   m_Bounds:
     m_Center: {x: 0, y: 0, z: 0}
@@ -52,24 +43,14 @@ AnimationClip:
       isPPtrCurve: 1
       isIntCurve: 0
       isSerializeReferenceCurve: 0
-    - serializedVersion: 2
-      path: 515468896
-      attribute: 0
-      script: {fileID: 0}
-      typeID: 212
-      customType: 23
-      isPPtrCurve: 1
-      isIntCurve: 0
-      isSerializeReferenceCurve: 0
     pptrCurveMapping:
-    - {fileID: 3990132046285905232, guid: 89892f0de05fc094b90ffade8e6cf1d2, type: 3}
-    - {fileID: -1479153362711567398, guid: 9106b31fb30e6524aa50b936f2d64956, type: 3}
+    - {fileID: 2560695541222395736, guid: f92f4ce908cbb6c4381f6a2e8710a605, type: 3}
   m_AnimationClipSettings:
     serializedVersion: 2
     m_AdditiveReferencePoseClip: {fileID: 0}
     m_AdditiveReferencePoseTime: 0
     m_StartTime: 0
-    m_StopTime: 0.2
+    m_StopTime: 1
     m_OrientationOffsetY: 0
     m_Level: 0
     m_CycleOffset: 0

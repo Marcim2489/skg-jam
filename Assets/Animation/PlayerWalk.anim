@@ -29,7 +29,22 @@ AnimationClip:
     - time: 0.3
       value: {fileID: -4224394978270022832, guid: 789f17e92e8402146829e0d0cc52df51, type: 3}
     attribute: m_Sprite
-    path: 
+    path: sprite gato
+    classID: 212
+    script: {fileID: 0}
+    flags: 2
+  - serializedVersion: 2
+    curve:
+    - time: 0
+      value: {fileID: 4234014805102763320, guid: 9106b31fb30e6524aa50b936f2d64956, type: 3}
+    - time: 0.1
+      value: {fileID: -1940755006107632873, guid: 9106b31fb30e6524aa50b936f2d64956, type: 3}
+    - time: 0.2
+      value: {fileID: 2064392025588047373, guid: 9106b31fb30e6524aa50b936f2d64956, type: 3}
+    - time: 0.3
+      value: {fileID: -1940755006107632873, guid: 9106b31fb30e6524aa50b936f2d64956, type: 3}
+    attribute: m_Sprite
+    path: sprite cachorro
     classID: 212
     script: {fileID: 0}
     flags: 2
@@ -41,7 +56,16 @@ AnimationClip:
   m_ClipBindingConstant:
     genericBindings:
     - serializedVersion: 2
-      path: 0
+      path: 328907526
+      attribute: 0
+      script: {fileID: 0}
+      typeID: 212
+      customType: 23
+      isPPtrCurve: 1
+      isIntCurve: 0
+      isSerializeReferenceCurve: 0
+    - serializedVersion: 2
+      path: 515468896
       attribute: 0
       script: {fileID: 0}
       typeID: 212
@@ -54,6 +78,10 @@ AnimationClip:
     - {fileID: -4224394978270022832, guid: 789f17e92e8402146829e0d0cc52df51, type: 3}
     - {fileID: -6393136559565444730, guid: 789f17e92e8402146829e0d0cc52df51, type: 3}
     - {fileID: -4224394978270022832, guid: 789f17e92e8402146829e0d0cc52df51, type: 3}
+    - {fileID: 4234014805102763320, guid: 9106b31fb30e6524aa50b936f2d64956, type: 3}
+    - {fileID: -1940755006107632873, guid: 9106b31fb30e6524aa50b936f2d64956, type: 3}
+    - {fileID: 2064392025588047373, guid: 9106b31fb30e6524aa50b936f2d64956, type: 3}
+    - {fileID: -1940755006107632873, guid: 9106b31fb30e6524aa50b936f2d64956, type: 3}
   m_AnimationClipSettings:
     serializedVersion: 2
     m_AdditiveReferencePoseClip: {fileID: 0}

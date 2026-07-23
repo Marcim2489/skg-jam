@@ -355,7 +355,7 @@ AudioListener:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6809565}
-  m_Enabled: 1
+  m_Enabled: 0
 --- !u!20 &6809567
 Camera:
   m_ObjectHideFlags: 0
@@ -590,7 +590,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &203464783
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2800,7 +2800,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 7.8333335, y: 2.375}
+  m_Size: {x: 5.821486, y: 1.6611428}
   m_EdgeRadius: 0
 --- !u!1 &951636205
 GameObject:
@@ -3357,6 +3357,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8980007169691005164, guid: ab43c5a400e9b384a8aa36034c54f9b4, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 1981761018312905428, guid: ab43c5a400e9b384a8aa36034c54f9b4, type: 3}
     - {fileID: 3447302725960583457, guid: ab43c5a400e9b384a8aa36034c54f9b4, type: 3}
@@ -3906,7 +3910,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 7.8333335, y: 2.375}
+  m_Size: {x: 5.809496, y: 1.6938382}
   m_EdgeRadius: 0
 --- !u!114 &2130647565
 MonoBehaviour:

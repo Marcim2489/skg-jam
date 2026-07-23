@@ -1,19 +1,13 @@
 fileFormatVersion: 2
-guid: 789f17e92e8402146829e0d0cc52df51
+guid: f92f4ce908cbb6c4381f6a2e8710a605
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -1336864005957472621
-    second: SenhorPuffles2-Sheet_0
+      213: -708395126583259637
+    second: SenhorPufflesPulo_0
   - first:
-      213: 7974267642846570344
-    second: SenhorPuffles2-Sheet_1
-  - first:
-      213: -4224394978270022832
-    second: SenhorPuffles2-Sheet_2
-  - first:
-      213: -6393136559565444730
-    second: SenhorPuffles2-Sheet_3
+      213: 2560695541222395736
+    second: SenhorPufflesPulo_1
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -57,7 +51,7 @@ TextureImporter:
   compressionQuality: 50
   spriteMode: 2
   spriteExtrude: 1
-  spriteMeshType: 0
+  spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
   spritePixelsToUnits: 16
@@ -135,89 +129,45 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: SenhorPuffles2-Sheet_0
+      name: SenhorPufflesPulo_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 32
-        height: 32
-      alignment: 9
-      pivot: {x: 0.52980906, y: 0.5}
+        x: 3
+        y: 6
+        width: 24
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 39e26e30541827de0800000000000000
-      internalID: -1336864005957472621
+      spriteID: b0e0367b2664b26f0800000000000000
+      internalID: -708395126583259637
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SenhorPuffles2-Sheet_1
+      name: SenhorPufflesPulo_1
       rect:
         serializedVersion: 2
-        x: 32
-        y: 0
-        width: 32
-        height: 32
-      alignment: 9
-      pivot: {x: 0.52888095, y: 0.5}
+        x: 39
+        y: 2
+        width: 20
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 867e2c3fb2a4aae60800000000000000
-      internalID: 7974267642846570344
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SenhorPuffles2-Sheet_2
-      rect:
-        serializedVersion: 2
-        x: 64
-        y: 0
-        width: 32
-        height: 32
-      alignment: 9
-      pivot: {x: 0.5310447, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 0537549262fef55c0800000000000000
-      internalID: -4224394978270022832
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SenhorPuffles2-Sheet_3
-      rect:
-        serializedVersion: 2
-        x: 96
-        y: 0
-        width: 32
-        height: 32
-      alignment: 9
-      pivot: {x: 0.5307131, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 689e98edb240747a0800000000000000
-      internalID: -6393136559565444730
+      spriteID: 85fcc70170b698320800000000000000
+      internalID: 2560695541222395736
       vertices: []
       indices: 
       edges: []
@@ -226,7 +176,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 5e97eb03825dee720800000000000000
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -234,14 +184,10 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     spriteCustomMetadata:
-      entries:
-      - key: SpriteEditor.SliceSettings
-        value: '{"sliceOnImport":false,"gridCellCount":{"x":4.0,"y":1.0},"gridSpriteSize":{"x":32.0,"y":32.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":2,"keepEmptyRects":false,"isAlternate":false}'
+      entries: []
     nameFileIdTable:
-      SenhorPuffles2-Sheet_0: -1336864005957472621
-      SenhorPuffles2-Sheet_1: 7974267642846570344
-      SenhorPuffles2-Sheet_2: -4224394978270022832
-      SenhorPuffles2-Sheet_3: -6393136559565444730
+      SenhorPufflesPulo_0: -708395126583259637
+      SenhorPufflesPulo_1: 2560695541222395736
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
