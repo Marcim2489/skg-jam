@@ -148,7 +148,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SceneTransitionManager
   enterTransition: {fileID: 79268000149445832}
-  delta: 1
+  delta: 60
 --- !u!1001 &3540765704984028941
 PrefabInstance:
   m_ObjectHideFlags: 0

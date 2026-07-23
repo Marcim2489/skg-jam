@@ -292,7 +292,7 @@ MonoBehaviour:
   dustPoint: {fileID: 7343182840157417541}
   dustInterval: 0.08
   particlesPerStep: 3
-  jumpForce: 0.1
+  jumpForce: 6
   jumpPeakDuration: 0.1
   jumpHeight: 0.9
   hurtbox: {fileID: 1364157179146830555}

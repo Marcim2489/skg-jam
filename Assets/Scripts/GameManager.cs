@@ -3,6 +3,7 @@ using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.SceneManagement;
 using System.Collections;
+using UnityEngine.Rendering;
 
 public class GameManager : MonoBehaviour
 {
@@ -11,14 +12,27 @@ public class GameManager : MonoBehaviour
     public int Score {get; private set;}
     public int ScoredNow => Score - scoreAtTheStart;
     // public int Aliquota => aliquota;
-    public int CiclesToGo => cenarios.Count - cenariosPercorridos;
+    // public int CiclesToGo => cenarios.Count - cenariosPercorridos;
     public event UnityAction levelStarted = delegate {};
     public event UnityAction<int> scoreIncreased = delegate {};
     public event UnityAction<int> scoreDecreased = delegate {};
     public event UnityAction<int> scoreChanged = delegate {};
     public event UnityAction<int> coletadosAtualMudou = delegate {};
 
-    List<string> cenarios = new List<string>(4){"Cenario 1","Cenario 2","Cenario 3","Cenario 4"};
+    // List<string> cenarios = new List<string>(4){"Cenario 1","Cenario 2","Cenario 3","Cenario 4"};
+
+    string[] florestasTier1 = {"Floresta 1-1"};
+    string[] florestasTier2 = {"Floresta 1-1"};
+    string[] florestasTier3 = {"Floresta 1-1"};
+
+    string[] fabricasTier1 = {"Floresta 1-1"};
+    string[] fabricasTier2 = {"Floresta 1-1"};
+    string[] fabricasTier3 = {"Floresta 1-1"};
+
+    string[] luasTier1 = {"Floresta 1-1"};
+    string[] luasTier2 = {"Floresta 1-1"};
+    string[] luasTier3 = {"Floresta 1-1"};
+
     int sequenciaAtual = 0;
     int cenariosPercorridos = 0;
     // int aliquota = 5000;
@@ -56,10 +70,10 @@ public class GameManager : MonoBehaviour
             // {
             //     recordes[personagem] = GetRecord(personagem);
             // }
-            foreach (string p in recordes.Keys)
-            {
-                Debug.Log($"{p} -- {recordes[p]}");
-            }
+            // foreach (string p in recordes.Keys)
+            // {
+            //     Debug.Log($"{p} -- {recordes[p]}");
+            // }
             IdPersonagemAtual = 0;
             return;
         }
@@ -87,14 +101,14 @@ public class GameManager : MonoBehaviour
 
     public void StartRun()
     {
-        for (int i = 0; i < cenarios.Count; i++)
-        {
+        // for (int i = 0; i < cenarios.Count; i++)
+        // {
             
-            int randomIndex = Random.Range(0, cenarios.Count);
-            string temp = cenarios[i];
-            cenarios[i] = cenarios[randomIndex];
-            cenarios[randomIndex] = temp;
-        }
+        //     int randomIndex = Random.Range(0, cenarios.Count);
+        //     string temp = cenarios[i];
+        //     cenarios[i] = cenarios[randomIndex];
+        //     cenarios[randomIndex] = temp;
+        // }
         // IdPersonagemAtual = idPersonagem;
         Score = 0;
         scoreAtTheStart = 0;
@@ -104,35 +118,87 @@ public class GameManager : MonoBehaviour
         StartCoroutine(WaitToPlayMusic(1));
     }
 
+    string PegarAleatorio(string[] strings)
+    {
+        // if (strings.Length <= 1)
+        // {
+        //     return strings[0];
+        // }
+        int randomIndex = Random.Range(0, strings.Length);
+        return strings[randomIndex];
+    }
+
+
     public void StartNewLevel()
     {
-        if (cenariosPercorridos >= cenarios.Count)
+        cenariosPercorridos++;
+        string faseEscolhida = "";
+        int resto = cenariosPercorridos % 3;
+        int tier = cenariosPercorridos/3;
+        if (tier < 1)
         {
-            // if (Score < aliquota)
-            // {
-            //     EndRun();
-            //     return;
-            // }
-            // aliquota += 1000;
-            cenariosPercorridos = 0;
-            int rid = Random.Range(0, cenarios.Count-1);
-            string tip = cenarios[0];
-            cenarios[0] = cenarios[rid];
-            cenarios[rid] = tip;
-            for (int i = 1; i < cenarios.Count; i++)
+            tier = 1;
+        }else if (tier > 3)
+        {
+            tier = 3;
+        }
+
+        if (resto == 1)
+        {
+            if (tier == 1)
             {
-                int randomIndex = Random.Range(1, cenarios.Count);
-                string temp = cenarios[i];
-                cenarios[i] = cenarios[randomIndex];
-                cenarios[randomIndex] = temp;
+                faseEscolhida = PegarAleatorio(florestasTier1);
+            }
+            if (tier == 2)
+            {
+                faseEscolhida = PegarAleatorio(florestasTier2);
+            }
+            if (tier == 3)
+            {
+                faseEscolhida = PegarAleatorio(florestasTier3);
             }
         }
+        else if (resto == 2)
+        {
+            if (tier == 1)
+            {
+                faseEscolhida = PegarAleatorio(fabricasTier1);
+            }
+            if (tier == 2)
+            {
+                faseEscolhida = PegarAleatorio(fabricasTier2);
+            }
+            if (tier == 3)
+            {
+                faseEscolhida = PegarAleatorio(fabricasTier3);
+            }
+        }
+        else
+        {
+            if (tier == 1)
+            {
+                faseEscolhida = PegarAleatorio(luasTier1);
+            }
+            if (tier == 2)
+            {
+                faseEscolhida = PegarAleatorio(luasTier2);
+            }
+            if (tier == 3)
+            {
+                faseEscolhida = PegarAleatorio(luasTier3);
+            }
+        }
+        if (faseEscolhida == "")
+        {
+            Debug.Log("Deu errado");
+            faseEscolhida = "Floresta 1-1";
+        }
+        // Debug.Log($"cenário {resto} -- tier {tier}");
+
         sequenciaAtual = 0;
         scoreAtTheStart = Score;
-        // SceneManager.LoadScene(cenarios[cenariosPercorridos]);
-        SceneTransitionManager.Instance.ChangeScene(cenarios[cenariosPercorridos]);
-        // SceneTransitionManager.Instance.ChangeScene(cenarios[cenariosPercorridos]);
-        cenariosPercorridos++;
+        SceneTransitionManager.Instance.ChangeScene(faseEscolhida);
+
         levelStarted.Invoke();
     }
 
@@ -190,7 +256,7 @@ public class GameManager : MonoBehaviour
             totalIncrease = amount * 5 + Mathf.RoundToInt(amount*5 * (0.1f*(sequenciaAtual-4)));
         }
         Score += totalIncrease;
-        Debug.Log(sequenciaAtual);
+        // Debug.Log(sequenciaAtual);
         coletadosAtualMudou.Invoke(sequenciaAtual);
         scoreIncreased.Invoke(totalIncrease);
         scoreChanged.Invoke(Score);

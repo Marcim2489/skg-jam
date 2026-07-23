@@ -80,7 +80,7 @@ public class Collectable: MonoBehaviour
         }
         if (collision.gameObject.CompareTag("Player"))
         {
-            Debug.Log("a");
+            // Debug.Log("a");
             podeColidir = false;
             GameManager.Instance.IncreaseScore(value);
             // gameObject.SetActive(false);

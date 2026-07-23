@@ -34,19 +34,20 @@ public class SceneTransitionManager : MonoBehaviour
         {
             yield break;
         }
+        float time = Time.deltaTime;
         Time.timeScale = 0;
         duringTransition = true;
         enterTransition.gameObject.SetActive(true);
         enterTransition.localScale = Vector3.zero;
         while(enterTransition.localScale.x < 25)
         {
-            enterTransition.localScale += new Vector3(delta, delta, delta);
+            enterTransition.localScale += new Vector3(delta, delta, delta) * time;
             yield return null;
         }
         SceneManager.LoadScene(sceneName);
         while(enterTransition.localScale.x >= 0.1)
         {
-            enterTransition.localScale -= new Vector3(delta, delta, delta);
+            enterTransition.localScale -= new Vector3(delta, delta, delta) * time;
             if (enterTransition.localScale.x < 0)
             {
                 break;

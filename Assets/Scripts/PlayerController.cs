@@ -128,7 +128,7 @@ public class PlayerController : MonoBehaviour
         hurtbox.gameObject.SetActive(false);
         while((spriteRendererGato.transform.position.y - transform.position.y) <= jumpHeight)
         {
-            spriteRendererGato.transform.position += Vector3.up * jumpForce;
+            spriteRendererGato.transform.position += Vector3.up * jumpForce * Time.deltaTime;
             yield return null;
         }
 
@@ -139,7 +139,7 @@ public class PlayerController : MonoBehaviour
 
         while((spriteRendererGato.transform.position.y - transform.position.y) >= 0f)
         {
-            spriteRendererGato.transform.position -= Vector3.up * jumpForce;
+            spriteRendererGato.transform.position -= Vector3.up * jumpForce * Time.deltaTime;
             if ((spriteRendererGato.transform.position.y - transform.position.y) <= 0f)
             {
                 break;

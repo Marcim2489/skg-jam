@@ -2620,7 +2620,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
@@ -3931,8 +3931,8 @@ GameObject:
   - component: {fileID: 2130647561}
   - component: {fileID: 2130647560}
   - component: {fileID: 2130647562}
-  - component: {fileID: 2130647564}
   - component: {fileID: 2130647565}
+  - component: {fileID: 2130647564}
   m_Layer: 0
   m_Name: TryAgain_0
   m_TagString: Untagged
@@ -4059,7 +4059,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0

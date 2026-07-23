@@ -36,7 +36,7 @@ public class CanvasManager : MonoBehaviour
         scoredNowText.text = $"Scored now: {GameManager.Instance.ScoredNow}";
         totalScoreText.text = $"Total score: {GameManager.Instance.Score}";
         // goalText.text = $"Goal: {GameManager.Instance.Aliquota}";
-        ciclesText.text = $"{GameManager.Instance.CiclesToGo}";
+        // ciclesText.text = $"{GameManager.Instance.CiclesToGo}";
         panel.SetActive(true);
     }
 
