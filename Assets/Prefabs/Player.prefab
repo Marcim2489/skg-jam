@@ -295,6 +295,7 @@ MonoBehaviour:
   jumpPeakDuration: 0.1
   jumpHeight: 1
   hurtbox: {fileID: 1364157179146830555}
+  onGameOver: 0
 --- !u!50 &622155060268079779
 Rigidbody2D:
   serializedVersion: 5
@@ -5313,7 +5314,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_MaskInteraction: 0
   m_Sprite: {fileID: -9029969318573314272, guid: 2332a4e83e8d6c549bd6ab5294e08ad6, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -5324,7 +5325,7 @@ SpriteRenderer:
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
-  m_SpriteSortPoint: 0
+  m_SpriteSortPoint: 1
 --- !u!1 &4424636092540416673
 GameObject:
   m_ObjectHideFlags: 0
@@ -5404,7 +5405,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_MaskInteraction: 0
   m_Sprite: {fileID: 3990132046285905232, guid: 89892f0de05fc094b90ffade8e6cf1d2, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -5415,7 +5416,7 @@ SpriteRenderer:
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
-  m_SpriteSortPoint: 0
+  m_SpriteSortPoint: 1
 --- !u!1 &6919563527422916869
 GameObject:
   m_ObjectHideFlags: 0
@@ -5442,7 +5443,7 @@ Transform:
   m_GameObject: {fileID: 6919563527422916869}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.082, y: -0.53, z: 0}
+  m_LocalPosition: {x: -0.082, y: -0.674, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -5506,4 +5507,4 @@ SpriteRenderer:
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
-  m_SpriteSortPoint: 0
+  m_SpriteSortPoint: 1

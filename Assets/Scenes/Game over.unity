@@ -546,7 +546,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: -1
+  m_SortingOrder: 3
   m_MaskInteraction: 0
   m_Sprite: {fileID: -9176912946443503178, guid: 6e7e22dfced6ea74c844e023607dde07, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -3275,7 +3275,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 2
   m_MaskInteraction: 0
   m_Sprite: {fileID: -1589174654649428344, guid: 65a776278d476e24ba78ea16b21c2933, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -3286,7 +3286,7 @@ SpriteRenderer:
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
-  m_SpriteSortPoint: 0
+  m_SpriteSortPoint: 1
 --- !u!50 &1592683969 stripped
 Rigidbody2D:
   m_CorrespondingSourceObject: {fileID: 622155060268079779, guid: ab43c5a400e9b384a8aa36034c54f9b4, type: 3}
@@ -3383,6 +3383,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4424636092540416673, guid: ab43c5a400e9b384a8aa36034c54f9b4, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6919563527422916869, guid: ab43c5a400e9b384a8aa36034c54f9b4, type: 3}
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
@@ -3564,7 +3568,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 2
+  m_SortingOrder: 4
   m_MaskInteraction: 0
   m_Sprite: {fileID: -9176912946443503178, guid: 6e7e22dfced6ea74c844e023607dde07, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -3671,7 +3675,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 2
   m_MaskInteraction: 0
   m_Sprite: {fileID: 8845484542517999813, guid: 4dce9e7c30369534789d20d07e667364, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -3682,7 +3686,7 @@ SpriteRenderer:
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
-  m_SpriteSortPoint: 0
+  m_SpriteSortPoint: 1
 --- !u!114 &1957614252
 MonoBehaviour:
   m_ObjectHideFlags: 0

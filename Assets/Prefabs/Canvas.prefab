@@ -650,7 +650,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &6577841318897496899
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1291,7 +1291,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &6900814811762492214
 Transform:
   m_ObjectHideFlags: 0
@@ -1640,7 +1640,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &662220310678800010
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2657,7 +2657,6 @@ MonoBehaviour:
   panel: {fileID: 2930973149356308858}
   scoredNowText: {fileID: 2570164557756437691}
   totalScoreText: {fileID: 454693325001850306}
-  goalText: {fileID: 1679213212751340266}
   ciclesText: {fileID: 7143712868320144056}
 --- !u!223 &41518216830923974
 Canvas:
