@@ -2,6 +2,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.SceneManagement;
+using System.Collections;
 
 public class GameManager : MonoBehaviour
 {
@@ -175,4 +176,10 @@ public class GameManager : MonoBehaviour
         }
         SceneManager.LoadScene("Game over");
     }
+
+    
+
+
+    
 }
+
