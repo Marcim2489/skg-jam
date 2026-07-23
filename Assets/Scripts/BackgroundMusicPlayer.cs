@@ -28,17 +28,16 @@ public class BackgroundMusicPlayer : MonoBehaviour
             Instance = this;
             DontDestroyOnLoad(gameObject);
         }
-        // SoundSettings.Instance.volumeUpdated+=UpdateVolume;
-        // UpdateVolume();
     }
 
-    void UpdateVolume()
+    public void Stop()
     {
-        // musicPlayer.volume = SoundSettings.Instance.VolumeValues[SoundSettings.Instance.VolumeLevel];
+        musicPlayer.Stop();
     }
 
-    void OnDestroy()
+    public void Play()
     {
-        // SoundSettings.Instance.volumeUpdated-=UpdateVolume;
+        musicPlayer.Play();
     }
+
 }

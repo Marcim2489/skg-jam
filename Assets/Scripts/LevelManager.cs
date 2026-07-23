@@ -6,7 +6,7 @@ using UnityEngine.Events;
 public class LevelManager : MonoBehaviour
 {
     public static LevelManager Instance {get; private set;}
-    [SerializeField]float timeLeft = 5;
+    float timeLeft = 15;
     Collectable[] coletaveis;
     Collectable ultimoEscolhido;
     public event UnityAction timeUp = delegate {};
@@ -54,7 +54,11 @@ public class LevelManager : MonoBehaviour
     {
         foreach(Collectable coletavel in coletaveis)
         {
-            coletavel.gameObject.SetActive(false);
+            // if (coletavel.gameObject.activeInHierarchy)
+            // {
+            //     coletavel.gameObject.SetActive(false);
+            // }
+            coletavel.Desabilitar();
         }
         List<Collectable>provisorio = coletaveis.ToList();
         if (ultimoEscolhido != null && provisorio.Contains(ultimoEscolhido) && provisorio.Count > 1)

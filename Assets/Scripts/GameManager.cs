@@ -25,6 +25,10 @@ public class GameManager : MonoBehaviour
     public bool BrokeRecord {get; private set;}
     int scoreAtTheStart;
 
+    [SerializeField]AudioSource musicaGato;
+    [SerializeField]AudioSource musicaCachorro;
+    [SerializeField]AudioSource musicaDerrotaGato;
+    [SerializeField]AudioSource musicaDerrotaCachorro;
 
     string[] personagens = {
         "Puffles", //gato - 0
@@ -97,6 +101,7 @@ public class GameManager : MonoBehaviour
         // aliquota = 5000;
         BrokeRecord = false;
         StartNewLevel();
+        StartCoroutine(WaitToPlayMusic(1));
     }
 
     public void StartNewLevel()
@@ -131,6 +136,33 @@ public class GameManager : MonoBehaviour
         levelStarted.Invoke();
     }
 
+    IEnumerator WaitToPlayMusic(int musicId)
+    {
+        StopAllMusic();
+        yield return new WaitForSeconds(0.2f);
+        StopAllMusic();
+        if (musicId == 1)
+        {
+            if (IdPersonagemAtual == 0)
+            {
+                musicaGato.Play();
+            }else
+            {
+                musicaCachorro.Play();
+            }
+            
+        }else if (musicId == 2)
+        {
+            if (IdPersonagemAtual == 0)
+            {
+                musicaDerrotaGato.Play();
+            }else
+            {
+                musicaDerrotaCachorro.Play();
+            }
+        }
+    }
+
     public void DecreaseScore(int amount)
     {
         int prevScore = Score;
@@ -150,18 +182,15 @@ public class GameManager : MonoBehaviour
     {
         sequenciaAtual++;
         int totalIncrease;
-        if (sequenciaAtual <= 3)
+        if (sequenciaAtual <= 4)
         {
-            totalIncrease = amount;
-        }else if (sequenciaAtual <= 6)
-        {
-            totalIncrease = amount * 5;
+            totalIncrease = amount * sequenciaAtual;
         }else
         {
-            totalIncrease = amount * 5 + Mathf.RoundToInt(amount*5 * (0.1f*(sequenciaAtual-3)));
+            totalIncrease = amount * 5 + Mathf.RoundToInt(amount*5 * (0.1f*(sequenciaAtual-4)));
         }
         Score += totalIncrease;
-        
+        Debug.Log(sequenciaAtual);
         coletadosAtualMudou.Invoke(sequenciaAtual);
         scoreIncreased.Invoke(totalIncrease);
         scoreChanged.Invoke(Score);
@@ -179,6 +208,40 @@ public class GameManager : MonoBehaviour
         }
         // SceneManager.LoadScene("Game over");
         SceneTransitionManager.Instance.ChangeScene("Game over");
+        StartCoroutine(WaitToPlayMusic(2));
+    }
+
+    public void StopAllMusic()
+    {
+        musicaGato.Stop();
+        musicaCachorro.Stop();
+        musicaDerrotaGato.Stop();
+        musicaDerrotaCachorro.Stop();
+    }
+
+    public void PlayMusic(int musicId)
+    {
+        StopAllMusic();
+        if (musicId == 1)
+        {
+            if (IdPersonagemAtual == 0)
+            {
+                musicaGato.Play();
+            }else
+            {
+                musicaCachorro.Play();
+            }
+            
+        }else if (musicId == 2)
+        {
+            if (IdPersonagemAtual == 0)
+            {
+                musicaDerrotaGato.Play();
+            }else
+            {
+                musicaDerrotaCachorro.Play();
+            }
+        }
     }
 
     public void SwitchCharacter(int charId)

@@ -6,16 +6,18 @@ public class Collectable: MonoBehaviour
     [SerializeField]Sprite[] peixeSprites;
     [SerializeField]Sprite[] ossoSprites;
     [SerializeField]SpriteRenderer spriteRenderer;
+    [SerializeField]Collider2D collider2d;
+    bool podeColidir = true;
 
     public void Setup()
     {
-        GameManager.Instance.coletadosAtualMudou+=AtualizarSprite;
+        // GameManager.Instance.coletadosAtualMudou+=AtualizarSprite;
         AtualizarSprite(0);
     }
 
     void OnDestroy()
     {
-        GameManager.Instance.coletadosAtualMudou-=AtualizarSprite;
+        // GameManager.Instance.coletadosAtualMudou-=AtualizarSprite;
     }
 
     void AtualizarSprite(int sequencia)
@@ -57,15 +59,31 @@ public class Collectable: MonoBehaviour
 
     public void Habilitar()
     {
-        gameObject.SetActive(true);
+        // gameObject.SetActive(true);
+        spriteRenderer.enabled = true;
+        collider2d.enabled = true;
+        podeColidir = true;
         AtualizarSprite(GameManager.Instance.SequenciaAtual);
+    }
+
+    public void Desabilitar()
+    {
+        spriteRenderer.enabled = false;
+        collider2d.enabled = false;
     }
 
     void OnTriggerEnter2D(Collider2D collision)
     {
+        if(podeColidir == false)
+        {
+            return;
+        }
         if (collision.gameObject.CompareTag("Player"))
         {
+            Debug.Log("a");
+            podeColidir = false;
             GameManager.Instance.IncreaseScore(value);
+            // gameObject.SetActive(false);
             LevelManager.Instance.HabilitarAleatorio();
         }
     }
