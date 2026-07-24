@@ -83,6 +83,15 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Lua 1-66.unity
     guid: e945118306a7dea4a8c049ef0ebbb542
+  - enabled: 1
+    path: Assets/Scenes/Lua 1-5.unity
+    guid: 7b3aadf5acd384c41a5397e6026fcbba
+  - enabled: 1
+    path: Assets/Scenes/Lua 1-77.unity
+    guid: 09107c2e21710844f9d7b8e1cf4f3232
+  - enabled: 1
+    path: Assets/Scenes/Lua 1-88.unity
+    guid: be176d2d16a424546aa2f8847636225b
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   m_UseUCBPForAssetBundles: 0
