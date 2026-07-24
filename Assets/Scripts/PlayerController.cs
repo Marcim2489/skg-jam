@@ -27,6 +27,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField]ObstacleDetector hurtbox;
     [SerializeField]bool onGameOver = false;
     [SerializeField]AudioClip jumpSound;
+    [SerializeField]DeathAnimation deathAnimation;
     private float dustTimer;
     // [SerializeField]ObstacleDetector obstacleDetector;
     MenuButton currentButton;
@@ -44,7 +45,7 @@ public class PlayerController : MonoBehaviour
             return velocidade * 1.5f;
         }
     }
-
+    bool dead = false;
 
     bool pulando = false;
     bool gatoSelecionado = false;
@@ -62,14 +63,44 @@ public class PlayerController : MonoBehaviour
         GameManager.Instance.trocouPersonagem-=SetCharacter;
     }
 
+    // void OnDestroy()
+    // {
+    //     hurtbox.died-=Die;
+    // }
+
     void Start()
     {
         SetCharacter(GameManager.Instance.IdPersonagemAtual);
         GameManager.Instance.trocouPersonagem+=SetCharacter;
+        hurtbox.died+=Die;
     }
+
+    void Die()
+    {
+        if (dead || LevelManager.Instance.TimeLeft <=0)
+        {
+            return;
+        }
+        LevelManager.Instance.StopTimer();
+        animator.Play("PlayerIdle");
+        hurtbox.died-=Die;
+        dead = true;
+        hurtbox.enabled = false;
+        foreach (Collider2D collider in GetComponents<Collider2D>())
+        {
+            collider.enabled = false;
+        }
+        rb.linearVelocity = Vector2.zero;
+        deathAnimation.PlayDeath();
+    }
+
 
     void Update()
     {
+        if (dead)
+        {
+            return;
+        }
         // Movimento
         rb.linearVelocity = Direcao.normalized * VelocidadeTotal;
 

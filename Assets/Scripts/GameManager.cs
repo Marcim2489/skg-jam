@@ -43,7 +43,7 @@ public class GameManager : MonoBehaviour
     [SerializeField]AudioSource musicaCachorro;
     [SerializeField]AudioSource musicaDerrotaGato;
     [SerializeField]AudioSource musicaDerrotaCachorro;
-    [SerializeField]AudioClip deathSound;
+    // [SerializeField]AudioClip deathSound;
 
     string[] personagens = {
         "Puffles", //gato - 0
@@ -265,7 +265,6 @@ public class GameManager : MonoBehaviour
 
     public void EndRun()
     {
-        SFXManager.Instance.PlaySound(deathSound, 1f, true);
         BrokeRecord = SaveRecord(NomePersonagemAtual, Score);
         sequenciaAtual = 0;
         cenariosPercorridos = 0;

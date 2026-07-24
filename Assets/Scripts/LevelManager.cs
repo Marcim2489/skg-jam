@@ -13,6 +13,7 @@ public class LevelManager : MonoBehaviour
 
     public float TimeLeft => timeLeft;
     bool ended = false;
+
     void Awake()
     {
         Instance = this;
@@ -48,6 +49,11 @@ public class LevelManager : MonoBehaviour
             
             ended = true;
         }
+    }
+
+    public void StopTimer()
+    {
+        ended=true;
     }
 
     public void HabilitarAleatorio()

@@ -1,5 +1,6 @@
 // using System.Collections;
 using UnityEngine;
+using UnityEngine.Events;
 // using UnityEngine.Events;
 
 public class ObstacleDetector : MonoBehaviour
@@ -8,6 +9,8 @@ public class ObstacleDetector : MonoBehaviour
     // [SerializeField]Collider2D[] colliders;
     // public event UnityAction immunityStarted = delegate {};
     // public event UnityAction immunityEnded = delegate {};
+
+    public event UnityAction died = delegate {};
 
     void OnTriggerEnter2D(Collider2D collision)
     {
@@ -19,7 +22,8 @@ public class ObstacleDetector : MonoBehaviour
             // {
             //     StartCoroutine(ImmunityTimer());
             // }
-            GameManager.Instance.EndRun();
+            // GameManager.Instance.EndRun();
+            died.Invoke();
         }
     }
 

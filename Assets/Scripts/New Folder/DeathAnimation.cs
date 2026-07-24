@@ -8,9 +8,12 @@ public class DeathAnimation : MonoBehaviour
     [SerializeField] private float jumpDuration = 0.35f;
 
     [Header("Queda")]
-    [SerializeField] private float fallSpeed = 7f;
+    [SerializeField] private float fallDuration = 0.5f;
+    [SerializeField] private float fallSpeed = 30f;
     [SerializeField] private float rotationSpeed = 360f;
-    [SerializeField] private float fallDistance = 12f;
+    [SerializeField] private float fallDistance = 16f;
+
+    [SerializeField]AudioClip deathSound;
 
     private bool playing = false;
 
@@ -20,10 +23,19 @@ public class DeathAnimation : MonoBehaviour
 
         playing = true;
         StartCoroutine(DeathRoutine());
+        StartCoroutine(WaitForGameOver());
+    }
+
+
+    IEnumerator WaitForGameOver()
+    {
+        yield return new WaitForSeconds(jumpDuration+fallDuration);
+        GameManager.Instance.EndRun();
     }
 
     IEnumerator DeathRoutine()
     {
+        SFXManager.Instance.PlaySound(deathSound, 1f, true);
         Vector3 start = transform.position;
 
         // SALTO
@@ -56,11 +68,11 @@ public class DeathAnimation : MonoBehaviour
             transform.Rotate(0, 0, rotationSpeed * Time.deltaTime);
 
             fallen += move;
-
+            fallSpeed += Time.deltaTime * 10;
             yield return null;
         }
 
         // Aqui você chama sua tela de Game Over
-        // GameManager.Instance.GameOver();
+        
     }
 }
