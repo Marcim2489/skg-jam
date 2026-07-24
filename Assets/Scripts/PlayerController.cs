@@ -26,6 +26,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField]float jumpHeight = 1f;
     [SerializeField]ObstacleDetector hurtbox;
     [SerializeField]bool onGameOver = false;
+    [SerializeField]AudioClip jumpSound;
     private float dustTimer;
     // [SerializeField]ObstacleDetector obstacleDetector;
     MenuButton currentButton;
@@ -126,6 +127,7 @@ public class PlayerController : MonoBehaviour
         pulando = true;
         animator.Play("PlayerJump");
         hurtbox.gameObject.SetActive(false);
+        SFXManager.Instance.PlaySound(jumpSound, 1f, false);
         while((spriteRendererGato.transform.position.y - transform.position.y) <= jumpHeight)
         {
             spriteRendererGato.transform.position += Vector3.up * jumpForce * Time.deltaTime;

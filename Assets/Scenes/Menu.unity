@@ -2019,6 +2019,7 @@ MonoBehaviour:
   selectedColor: {r: 1, g: 0.9647059, b: 0.7411765, a: 1}
   selectedScale: 1.15
   characterId: 0
+  buttonSound: {fileID: 8300000, guid: c76b80b29876df349b6b2dd6a4403a7c, type: 3}
 --- !u!1 &652415893
 GameObject:
   m_ObjectHideFlags: 0
@@ -2400,6 +2401,7 @@ MonoBehaviour:
   normalColor: {r: 1, g: 1, b: 1, a: 1}
   selectedColor: {r: 1, g: 0.9647059, b: 0.7411765, a: 1}
   selectedScale: 1.15
+  buttonSound: {fileID: 8300000, guid: c76b80b29876df349b6b2dd6a4403a7c, type: 3}
 --- !u!212 &712385482
 SpriteRenderer:
   serializedVersion: 2
@@ -3372,6 +3374,7 @@ MonoBehaviour:
   selectedColor: {r: 1, g: 0.9647059, b: 0.7411765, a: 1}
   selectedScale: 1.15
   characterId: 1
+  buttonSound: {fileID: 8300000, guid: c76b80b29876df349b6b2dd6a4403a7c, type: 3}
 --- !u!1001 &1048002208
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6802,8 +6805,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1854633844}
   - component: {fileID: 1854633843}
-  - component: {fileID: 1854633845}
   - component: {fileID: 1854633847}
+  - component: {fileID: 1854633845}
   - component: {fileID: 1854633848}
   m_Layer: 0
   m_Name: SomDiminuir_0
@@ -6948,6 +6951,7 @@ MonoBehaviour:
   normalColor: {r: 1, g: 1, b: 1, a: 1}
   selectedColor: {r: 1, g: 0.9647059, b: 0.7411765, a: 1}
   selectedScale: 1.15
+  buttonSound: {fileID: 8300000, guid: c76b80b29876df349b6b2dd6a4403a7c, type: 3}
 --- !u!114 &1854633848
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7971,6 +7975,7 @@ MonoBehaviour:
   normalColor: {r: 1, g: 1, b: 1, a: 1}
   selectedColor: {r: 1, g: 0.9647059, b: 0.7411765, a: 1}
   selectedScale: 1.1
+  buttonSound: {fileID: 8300000, guid: 5a5271b033760bf40b455cfca4dbb0ba, type: 3}
 --- !u!61 &2057938919
 BoxCollider2D:
   m_ObjectHideFlags: 0

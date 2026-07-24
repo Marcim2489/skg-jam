@@ -297,6 +297,7 @@ MonoBehaviour:
   jumpHeight: 0.9
   hurtbox: {fileID: 1364157179146830555}
   onGameOver: 0
+  jumpSound: {fileID: 8300000, guid: 443d8dcf6af37ae45af8cab836e69353, type: 3}
 --- !u!50 &622155060268079779
 Rigidbody2D:
   serializedVersion: 5

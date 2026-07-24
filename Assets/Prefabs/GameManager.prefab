@@ -52,6 +52,7 @@ MonoBehaviour:
   musicaCachorro: {fileID: 3213166960480939153}
   musicaDerrotaGato: {fileID: 6442968516451535633}
   musicaDerrotaCachorro: {fileID: 2342625869590520076}
+  deathSound: {fileID: 8300000, guid: 02101106ad95c014d8c36521c1f9c6d1, type: 3}
 --- !u!82 &7842779185944490181
 AudioSource:
   m_ObjectHideFlags: 0
