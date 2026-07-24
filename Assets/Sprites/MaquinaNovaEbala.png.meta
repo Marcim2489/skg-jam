@@ -1,10 +1,13 @@
 fileFormatVersion: 2
-guid: 614cadf8ffa4039488e7e5144f2ac527
+guid: ce8d2a85c49c2be4bbe15644e55ecab6
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 2018169729544185087
-    second: Serra2_0
+      213: -5518026723370887773
+    second: MaquinaNovaEbala_0
+  - first:
+      213: -6282955599640075729
+    second: MaquinaNovaEbala_1
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -75,7 +78,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -100,13 +103,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Serra2_0
+      name: MaquinaNovaEbala_0
       rect:
         serializedVersion: 2
-        x: 16
-        y: 13
-        width: 33
-        height: 33
+        x: 13
+        y: 16
+        width: 39
+        height: 27
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +118,30 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: ff46de12daaf10c10800000000000000
-      internalID: 2018169729544185087
+      spriteID: 3a59d5c4ee70c63b0800000000000000
+      internalID: -5518026723370887773
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MaquinaNovaEbala_1
+      rect:
+        serializedVersion: 2
+        x: 51
+        y: 24
+        width: 12
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f22e6efab257ec8a0800000000000000
+      internalID: -6282955599640075729
       vertices: []
       indices: 
       edges: []
@@ -135,7 +160,8 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Serra2_0: 2018169729544185087
+      MaquinaNovaEbala_0: -5518026723370887773
+      MaquinaNovaEbala_1: -6282955599640075729
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

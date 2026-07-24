@@ -93,6 +93,7 @@ public class Collectable: MonoBehaviour
             // Debug.Log("a");
             podeColidir = false;
             GameManager.Instance.IncreaseScore(value);
+            ScorePopupManager.Instance.Show(value, transform.position);
             // gameObject.SetActive(false);
             LevelManager.Instance.HabilitarAleatorio();
         }
