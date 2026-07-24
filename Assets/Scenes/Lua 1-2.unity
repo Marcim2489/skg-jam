@@ -7102,6 +7102,83 @@ MonoBehaviour:
   spriteRenderer: {fileID: 1814652172}
   speed: 2
   minAlpha: 0.4
+--- !u!1001 &1824785953
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 3674198105625522214, guid: b9bd0fb32589a144bb275d6138c56aa1, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3674198105625522214, guid: b9bd0fb32589a144bb275d6138c56aa1, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3674198105625522214, guid: b9bd0fb32589a144bb275d6138c56aa1, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3674198105625522214, guid: b9bd0fb32589a144bb275d6138c56aa1, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3674198105625522214, guid: b9bd0fb32589a144bb275d6138c56aa1, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3674198105625522214, guid: b9bd0fb32589a144bb275d6138c56aa1, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3674198105625522214, guid: b9bd0fb32589a144bb275d6138c56aa1, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3674198105625522214, guid: b9bd0fb32589a144bb275d6138c56aa1, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3674198105625522214, guid: b9bd0fb32589a144bb275d6138c56aa1, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3674198105625522214, guid: b9bd0fb32589a144bb275d6138c56aa1, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4625740541035861339, guid: b9bd0fb32589a144bb275d6138c56aa1, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6148926460966034145, guid: b9bd0fb32589a144bb275d6138c56aa1, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -6.44
+      objectReference: {fileID: 0}
+    - target: {fileID: 6148926460966034145, guid: b9bd0fb32589a144bb275d6138c56aa1, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 3.46
+      objectReference: {fileID: 0}
+    - target: {fileID: 7301769251808183295, guid: b9bd0fb32589a144bb275d6138c56aa1, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 4.13
+      objectReference: {fileID: 0}
+    - target: {fileID: 7301769251808183295, guid: b9bd0fb32589a144bb275d6138c56aa1, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -1.73
+      objectReference: {fileID: 0}
+    - target: {fileID: 8375795037581821046, guid: b9bd0fb32589a144bb275d6138c56aa1, type: 3}
+      propertyPath: m_Name
+      value: Serra spawner
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: b9bd0fb32589a144bb275d6138c56aa1, type: 3}
 --- !u!1 &1826290151
 GameObject:
   m_ObjectHideFlags: 0
@@ -7778,3 +7855,4 @@ SceneRoots:
   - {fileID: 556895749}
   - {fileID: 1104854188}
   - {fileID: 1929851999}
+  - {fileID: 1824785953}
