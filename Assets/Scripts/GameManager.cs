@@ -21,17 +21,17 @@ public class GameManager : MonoBehaviour
 
     // List<string> cenarios = new List<string>(4){"Cenario 1","Cenario 2","Cenario 3","Cenario 4"};
 
-    string[] florestasTier1 = {"Floresta 1-1"};
-    string[] florestasTier2 = {"Floresta 1-1"};
-    string[] florestasTier3 = {"Floresta 1-1"};
+    string[] florestasTier1 = {"Floresta 1-1", "Floresta 1-2", "Floresta 1-3", "Floresta 1-4", "Floresta 1-5"};
+    string[] florestasTier2 = {"Floresta 1-1", "Floresta 1-2", "Floresta 1-3", "Floresta 1-4", "Floresta 1-5"};
+    string[] florestasTier3 = {"Floresta 1-1", "Floresta 1-2", "Floresta 1-3", "Floresta 1-4", "Floresta 1-5"};
 
-    string[] fabricasTier1 = {"Floresta 1-1"};
-    string[] fabricasTier2 = {"Floresta 1-1"};
-    string[] fabricasTier3 = {"Floresta 1-1"};
+    string[] fabricasTier1 = {"Floresta 1-1", "Floresta 1-2", "Floresta 1-3", "Floresta 1-4", "Floresta 1-5"};
+    string[] fabricasTier2 = {"Floresta 1-1", "Floresta 1-2", "Floresta 1-3", "Floresta 1-4", "Floresta 1-5"};
+    string[] fabricasTier3 = {"Floresta 1-1", "Floresta 1-2", "Floresta 1-3", "Floresta 1-4", "Floresta 1-5"};
 
-    string[] luasTier1 = {"Floresta 1-1"};
-    string[] luasTier2 = {"Floresta 1-1"};
-    string[] luasTier3 = {"Floresta 1-1"};
+    string[] luasTier1 = {"Floresta 1-1", "Floresta 1-2", "Floresta 1-3", "Floresta 1-4", "Floresta 1-5"};
+    string[] luasTier2 = {"Floresta 1-1", "Floresta 1-2", "Floresta 1-3", "Floresta 1-4", "Floresta 1-5"};
+    string[] luasTier3 = {"Floresta 1-1", "Floresta 1-2", "Floresta 1-3", "Floresta 1-4", "Floresta 1-5"};
 
     int sequenciaAtual = 0;
     int cenariosPercorridos = 0;
