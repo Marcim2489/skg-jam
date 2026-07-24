@@ -6,11 +6,11 @@ public class BouncingObstacle : MovingObstacle
 
     protected override void Start()
     {
-        base.Start();
+        // base.Start();
         wallDetector.hitWall+=ChangeDirection;
     }
 
-    void ChangeDirection(Vector2 direction)
+    public void ChangeDirection(Vector2 direction)
     {
         rigidbody2d.linearVelocity = direction.normalized * velocidade;
     }
