@@ -27,7 +27,7 @@ public class Projectile : MonoBehaviour
     {
         if (collision.gameObject.layer == LayerMask.NameToLayer("Wall"))
         {
-            Destroy(gameObject, 0.2f);
+            Destroy(gameObject, 0.06f);
         }
     }
 }
