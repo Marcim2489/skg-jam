@@ -8,7 +8,7 @@ public class ScoreDisplay : MonoBehaviour
     void Start()
     {
         GameManager.Instance.scoreChanged += DisplayScore;
-        displayText.text = $"Score: {GameManager.Instance.Score}";
+        DisplayScore(GameManager.Instance.Score);
     }
 
     void OnDisable()
@@ -18,6 +18,6 @@ public class ScoreDisplay : MonoBehaviour
 
     void DisplayScore(int currentScore)
     {
-        displayText.text = $"Score: {currentScore}";
+        displayText.text = $"{currentScore}";
     }
 }
