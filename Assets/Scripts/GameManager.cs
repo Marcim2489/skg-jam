@@ -247,23 +247,28 @@ public class GameManager : MonoBehaviour
         scoreChanged.Invoke(Score);
     }
 
-    public void IncreaseScore(int amount)
+    public int IncreaseScore(int amount)   // ← Adicione o "int" no retorno
+{
+    sequenciaAtual++;
+    
+    int totalIncrease;
+    if (sequenciaAtual <= 4)
     {
-        sequenciaAtual++;
-        int totalIncrease;
-        if (sequenciaAtual <= 4)
-        {
-            totalIncrease = amount * sequenciaAtual;
-        }else
-        {
-            totalIncrease = amount * 5 + Mathf.RoundToInt(amount*5 * (0.1f*(sequenciaAtual-4)));
-        }
-        Score += totalIncrease;
-        // Debug.Log(sequenciaAtual);
-        coletadosAtualMudou.Invoke(sequenciaAtual);
-        scoreIncreased.Invoke(totalIncrease);
-        scoreChanged.Invoke(Score);
+        totalIncrease = amount * sequenciaAtual;
     }
+    else
+    {
+        totalIncrease = amount * 5 + Mathf.RoundToInt(amount * 5 * (0.1f * (sequenciaAtual - 4)));
+    }
+
+    Score += totalIncrease;
+
+    coletadosAtualMudou.Invoke(sequenciaAtual);
+    scoreIncreased.Invoke(totalIncrease);   // já estava assim
+    scoreChanged.Invoke(Score);
+
+    return totalIncrease;   // ← NOVA LINHA
+}
 
     public void EndRun()
     {

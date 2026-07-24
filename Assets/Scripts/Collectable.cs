@@ -1,66 +1,45 @@
 using UnityEngine;
 
-public class Collectable: MonoBehaviour
+public class Collectable : MonoBehaviour
 {
-    [SerializeField]int value = 100;
-    [SerializeField]Sprite[] peixeSprites;
-    [SerializeField]Sprite[] ossoSprites;
-    [SerializeField]SpriteRenderer spriteRenderer;
-    [SerializeField]Collider2D collider2d;
-    [SerializeField]AudioClip[] sonsColetar;
+    [SerializeField] int value = 100;
+    [SerializeField] Sprite[] peixeSprites;
+    [SerializeField] Sprite[] ossoSprites;
+    [SerializeField] SpriteRenderer spriteRenderer;
+    [SerializeField] Collider2D collider2d;
+    [SerializeField] AudioClip[] sonsColetar;
+
+    [Header("Floating Score")]
+    [SerializeField] private FloatingScore floatingScorePrefab;
+    [SerializeField] private float verticalOffset = 0.8f; // Ajuste conforme necessário
+
     bool podeColidir = true;
 
     public void Setup()
     {
-        // GameManager.Instance.coletadosAtualMudou+=AtualizarSprite;
         AtualizarSprite(0);
-    }
-
-    void OnDestroy()
-    {
-        // GameManager.Instance.coletadosAtualMudou-=AtualizarSprite;
     }
 
     void AtualizarSprite(int sequencia)
     {
+        int seq = Mathf.Clamp(sequencia, 0, 3);
+        
         switch (GameManager.Instance.IdPersonagemAtual)
         {
             case 0:
-                if (sequencia > 3)
-                {
-                    sequencia = 3;
-                }else if (sequencia < 0)
-                {
-                    sequencia = 0;
-                }
-                spriteRenderer.sprite = peixeSprites[sequencia];
+                spriteRenderer.sprite = peixeSprites[seq];
                 break;
             case 1:
-                if (sequencia > 3)
-                {
-                    sequencia = 3;
-                }else if (sequencia < 0)
-                {
-                    sequencia = 0;
-                }
-                spriteRenderer.sprite = ossoSprites[sequencia];
+                spriteRenderer.sprite = ossoSprites[seq];
                 break;
             default:
-                if (sequencia > 3)
-                {
-                    sequencia = 3;
-                }else if (sequencia < 0)
-                {
-                    sequencia = 0;
-                }
-                spriteRenderer.sprite = peixeSprites[sequencia];
+                spriteRenderer.sprite = peixeSprites[seq];
                 break;
         }
     }
 
     public void Habilitar()
     {
-        // gameObject.SetActive(true);
         spriteRenderer.enabled = true;
         collider2d.enabled = true;
         podeColidir = true;
@@ -75,26 +54,38 @@ public class Collectable: MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D collision)
     {
-        if(podeColidir == false)
-        {
+        if (!podeColidir || !collision.gameObject.CompareTag("Player"))
             return;
-        }
-        if (collision.gameObject.CompareTag("Player"))
+
+        podeColidir = false;
+
+        // Toca o som
+        int sequencia = Mathf.Clamp(GameManager.Instance.SequenciaAtual, 0, 3);
+        SFXManager.Instance.PlaySound(sonsColetar[sequencia], 1f, false);
+
+        // Aumenta a pontuação e recebe o valor REAL adicionado (com multiplicador)
+        int pontosAdicionados = GameManager.Instance.IncreaseScore(value);
+
+        // Cria o Floating Score com o valor correto
+        if (floatingScorePrefab != null)
         {
-            int sequencia = GameManager.Instance.SequenciaAtual;
-            if (sequencia > 3)
+            Vector3 spawnPos = transform.position + Vector3.up * verticalOffset;
+            
+            Camera mainCam = Camera.main;
+            Transform canvasParent = GameObject.Find("FloatingScoreCanvas")?.transform;
+
+            if (canvasParent != null && mainCam != null)
             {
-                sequencia = 3;
-            }else if (sequencia < 0)
-            {
-                sequencia = 0;
+                FloatingScore fs = Instantiate(floatingScorePrefab);
+                fs.Setup(pontosAdicionados, spawnPos, mainCam, canvasParent);
             }
-            SFXManager.Instance.PlaySound(sonsColetar[sequencia], 1f, false);
-            // Debug.Log("a");
-            podeColidir = false;
-            GameManager.Instance.IncreaseScore(value);
-            // gameObject.SetActive(false);
-            LevelManager.Instance.HabilitarAleatorio();
+            else
+            {
+                Debug.LogWarning("FloatingScoreCanvas ou Camera não encontrado!");
+            }
         }
+
+        // Chama o próximo coletável
+        LevelManager.Instance.HabilitarAleatorio();
     }
 }
