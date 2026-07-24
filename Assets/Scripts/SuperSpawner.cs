@@ -7,6 +7,7 @@ public class SuperSpawner : MonoBehaviour
     [SerializeField]float timeToSpawn = 1f;
     [SerializeField]float spawnOffset = 0.8f;
     [SerializeField]float projectileSpeed = 20f;
+    [SerializeField]AudioClip shotSound;
 
     void Start()
     {
@@ -32,6 +33,7 @@ public class SuperSpawner : MonoBehaviour
         p4.transform.position = transform.position - transform.right*spawnOffset;
         p4.Launch(projectileSpeed, -transform.right);
 
+        SFXManager.Instance.PlaySound(shotSound, transform.position, 0.55f, false);
         StartCoroutine(Spawn());
     }
 }

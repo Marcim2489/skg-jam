@@ -123,6 +123,7 @@ MonoBehaviour:
   timeToSpawn: 1
   spawnOffset: 1.3
   projectileSpeed: 8
+  shotSound: {fileID: 8300000, guid: 15e9939879265b8438f9ed183e7822d7, type: 3}
 --- !u!58 &8153307797131503882
 CircleCollider2D:
   m_ObjectHideFlags: 0
