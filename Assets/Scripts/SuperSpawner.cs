@@ -16,17 +16,17 @@ public class SuperSpawner : MonoBehaviour
     IEnumerator Spawn()
     {
         yield return new WaitForSeconds(timeToSpawn);
-        Projectile p = Instantiate(projectile);
-        p.transform.position = transform.position + transform.up*spawnOffset;
-        p.Launch(projectileSpeed, transform.up);
+        //Projectile p = Instantiate(projectile);
+        //p.transform.position = transform.position + transform.up*spawnOffset;
+        //p.Launch(projectileSpeed, transform.up);
 
         Projectile p2 = Instantiate(projectile);
         p2.transform.position = transform.position + transform.right*spawnOffset;
         p2.Launch(projectileSpeed, transform.right);
 
-        Projectile p3 = Instantiate(projectile);
-        p3.transform.position = transform.position - transform.up*spawnOffset;
-        p3.Launch(projectileSpeed, -transform.up);
+        //Projectile p3 = Instantiate(projectile);
+        //p3.transform.position = transform.position - transform.up*spawnOffset;
+        //p3.Launch(projectileSpeed, -transform.up);
 
         Projectile p4 = Instantiate(projectile);
         p4.transform.position = transform.position - transform.right*spawnOffset;
