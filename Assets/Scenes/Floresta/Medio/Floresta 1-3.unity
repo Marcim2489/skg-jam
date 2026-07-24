@@ -356,7 +356,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: SerraGIRATORIA (2)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 266520566978834035, guid: 359ba0418e81c6c48b768263e7f3f89a, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
@@ -386,7 +387,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c5513d222559b64db9017a529e0aac2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Tweener
-  moveVector: {x: 4, y: 3.2, z: 0}
+  moveVector: {x: 0, y: 3.4, z: 0}
   moveTime: 0.85
   easing: 7
   loopType: 1
@@ -504,7 +505,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: SerraGIRATORIA
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 266520566978834035, guid: 359ba0418e81c6c48b768263e7f3f89a, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:

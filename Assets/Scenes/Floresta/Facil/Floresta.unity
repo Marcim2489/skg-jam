@@ -260,11 +260,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1184954485635067285, guid: 359ba0418e81c6c48b768263e7f3f89a, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 2.76
+      value: 3.13
       objectReference: {fileID: 0}
     - target: {fileID: 1184954485635067285, guid: 359ba0418e81c6c48b768263e7f3f89a, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.92
+      value: 1.51
       objectReference: {fileID: 0}
     - target: {fileID: 1184954485635067285, guid: 359ba0418e81c6c48b768263e7f3f89a, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1332,7 +1332,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c5513d222559b64db9017a529e0aac2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Tweener
-  moveVector: {x: 0, y: 0, z: 0}
+  moveVector: {x: 0, y: -5, z: 0}
   moveTime: 0.85
   easing: 7
   loopType: 1
@@ -1476,7 +1476,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c5513d222559b64db9017a529e0aac2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Tweener
-  moveVector: {x: 0, y: 0, z: 0}
+  moveVector: {x: 0, y: 4, z: 0}
   moveTime: 0.85
   easing: 7
   loopType: 1
@@ -3603,11 +3603,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1184954485635067285, guid: 359ba0418e81c6c48b768263e7f3f89a, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -4.62
+      value: -5.4
       objectReference: {fileID: 0}
     - target: {fileID: 1184954485635067285, guid: 359ba0418e81c6c48b768263e7f3f89a, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.89
+      value: -2.5
       objectReference: {fileID: 0}
     - target: {fileID: 1184954485635067285, guid: 359ba0418e81c6c48b768263e7f3f89a, type: 3}
       propertyPath: m_LocalPosition.z

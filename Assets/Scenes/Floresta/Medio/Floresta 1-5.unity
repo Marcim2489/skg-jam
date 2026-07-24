@@ -299,7 +299,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: SerraGIRATORIA (3)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 266520566978834035, guid: 359ba0418e81c6c48b768263e7f3f89a, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
@@ -504,7 +505,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: SerraGIRATORIA
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 266520566978834035, guid: 359ba0418e81c6c48b768263e7f3f89a, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
@@ -3163,7 +3165,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: SerraGIRATORIA (2)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 266520566978834035, guid: 359ba0418e81c6c48b768263e7f3f89a, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
@@ -3550,7 +3553,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: SerraGIRATORIA (1)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 266520566978834035, guid: 359ba0418e81c6c48b768263e7f3f89a, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:

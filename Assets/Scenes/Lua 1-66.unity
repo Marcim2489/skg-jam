@@ -3004,11 +3004,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1184954485635067285, guid: 359ba0418e81c6c48b768263e7f3f89a, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -1.33
+      value: -2.51
       objectReference: {fileID: 0}
     - target: {fileID: 1184954485635067285, guid: 359ba0418e81c6c48b768263e7f3f89a, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 3.21
+      value: 1.04
       objectReference: {fileID: 0}
     - target: {fileID: 1184954485635067285, guid: 359ba0418e81c6c48b768263e7f3f89a, type: 3}
       propertyPath: m_LocalPosition.z
@@ -3072,8 +3072,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c5513d222559b64db9017a529e0aac2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Tweener
-  moveVector: {x: -4, y: 0, z: 0}
-  moveTime: 1
+  moveVector: {x: 5, y: 0, z: 0}
+  moveTime: 0.8
   easing: 7
   loopType: 1
 --- !u!1 &1002378646
@@ -4772,11 +4772,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3402395121227996163, guid: 71f221aa4e4af2645bd34c443a1f913f, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 8.56
+      value: 2.26
       objectReference: {fileID: 0}
     - target: {fileID: 3402395121227996163, guid: 71f221aa4e4af2645bd34c443a1f913f, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 4.1834874
+      value: 4.97
       objectReference: {fileID: 0}
     - target: {fileID: 3402395121227996163, guid: 71f221aa4e4af2645bd34c443a1f913f, type: 3}
       propertyPath: m_LocalPosition.z
@@ -7088,11 +7088,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3402395121227996163, guid: 71f221aa4e4af2645bd34c443a1f913f, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -8.847494
+      value: -2.51
       objectReference: {fileID: 0}
     - target: {fileID: 3402395121227996163, guid: 71f221aa4e4af2645bd34c443a1f913f, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 4.1834874
+      value: 4.93
       objectReference: {fileID: 0}
     - target: {fileID: 3402395121227996163, guid: 71f221aa4e4af2645bd34c443a1f913f, type: 3}
       propertyPath: m_LocalPosition.z
@@ -7347,6 +7347,88 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &1841320661
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1184954485635067285, guid: 359ba0418e81c6c48b768263e7f3f89a, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -7.93
+      objectReference: {fileID: 0}
+    - target: {fileID: 1184954485635067285, guid: 359ba0418e81c6c48b768263e7f3f89a, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 3.21
+      objectReference: {fileID: 0}
+    - target: {fileID: 1184954485635067285, guid: 359ba0418e81c6c48b768263e7f3f89a, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1184954485635067285, guid: 359ba0418e81c6c48b768263e7f3f89a, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1184954485635067285, guid: 359ba0418e81c6c48b768263e7f3f89a, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1184954485635067285, guid: 359ba0418e81c6c48b768263e7f3f89a, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1184954485635067285, guid: 359ba0418e81c6c48b768263e7f3f89a, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1184954485635067285, guid: 359ba0418e81c6c48b768263e7f3f89a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1184954485635067285, guid: 359ba0418e81c6c48b768263e7f3f89a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1184954485635067285, guid: 359ba0418e81c6c48b768263e7f3f89a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6761584746454277303, guid: 359ba0418e81c6c48b768263e7f3f89a, type: 3}
+      propertyPath: m_Name
+      value: SerraGIRATORIA (2)
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 266520566978834035, guid: 359ba0418e81c6c48b768263e7f3f89a, type: 3}
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 6761584746454277303, guid: 359ba0418e81c6c48b768263e7f3f89a, type: 3}
+      insertIndex: 4
+      addedObject: {fileID: 1841320663}
+  m_SourcePrefab: {fileID: 100100000, guid: 359ba0418e81c6c48b768263e7f3f89a, type: 3}
+--- !u!1 &1841320662 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6761584746454277303, guid: 359ba0418e81c6c48b768263e7f3f89a, type: 3}
+  m_PrefabInstance: {fileID: 1841320661}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1841320663
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1841320662}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9c5513d222559b64db9017a529e0aac2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Tweener
+  moveVector: {x: 0, y: -6, z: 0}
+  moveTime: 1
+  easing: 7
+  loopType: 1
 --- !u!1 &2032674336
 GameObject:
   m_ObjectHideFlags: 0
@@ -7448,7 +7530,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1184954485635067285, guid: 359ba0418e81c6c48b768263e7f3f89a, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1.28
+      value: 8.21
       objectReference: {fileID: 0}
     - target: {fileID: 1184954485635067285, guid: 359ba0418e81c6c48b768263e7f3f89a, type: 3}
       propertyPath: m_LocalPosition.y
@@ -7516,7 +7598,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c5513d222559b64db9017a529e0aac2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Tweener
-  moveVector: {x: 4, y: 0, z: 0}
+  moveVector: {x: 0, y: -6, z: 0}
   moveTime: 1
   easing: 7
   loopType: 1
@@ -7834,7 +7916,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7154770574727591005, guid: ab43c5a400e9b384a8aa36034c54f9b4, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.62
+      value: -1.07
       objectReference: {fileID: 0}
     - target: {fileID: 7154770574727591005, guid: ab43c5a400e9b384a8aa36034c54f9b4, type: 3}
       propertyPath: m_LocalPosition.z
@@ -7893,6 +7975,7 @@ SceneRoots:
   - {fileID: 595662246}
   - {fileID: 1826290153}
   - {fileID: 2046837165}
+  - {fileID: 1841320661}
   - {fileID: 983796163}
   - {fileID: 1813468377}
   - {fileID: 1302063034}

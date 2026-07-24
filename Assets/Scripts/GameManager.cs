@@ -30,7 +30,7 @@ public class GameManager : MonoBehaviour
     string[] fabricasTier3 = {"Fábrica 7", "Fábrica 8", "Fábrica 9"};
 
     string[] luasTier1 = {"Lua 1-1", "Lua 1-2", "Lua 1-3"};
-    string[] luasTier2 = {"Lua 1-1", "Lua 1-2", "Lua 1-3"};
+    string[] luasTier2 = {"Lua 1-44", "Lua 1-55", "Lua 1-66"};
     string[] luasTier3 = {"Lua 1-1", "Lua 1-2", "Lua 1-3"};
 
     int sequenciaAtual = 0;
