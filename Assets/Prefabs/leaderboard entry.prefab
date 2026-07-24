@@ -65,8 +65,8 @@ MonoBehaviour:
   characterImage: {fileID: 508416036470986234}
   charSprites:
   - {fileID: -1336864005957472621, guid: 789f17e92e8402146829e0d0cc52df51, type: 3}
-  - {fileID: 7394846351055212603, guid: 3fd84d5caebf4b34a899b086094a2e5b, type: 3}
-  - {fileID: 68785551875046145, guid: 7be998fe96a558842832a9f058b25a20, type: 3}
+  - {fileID: -1479153362711567398, guid: 9106b31fb30e6524aa50b936f2d64956, type: 3}
+  - {fileID: -4942243560991149492, guid: e865b7025be5f2946b19af50129144d5, type: 3}
 --- !u!114 &8938407733684248505
 MonoBehaviour:
   m_ObjectHideFlags: 0

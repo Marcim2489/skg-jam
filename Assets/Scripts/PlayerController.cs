@@ -68,6 +68,21 @@ public class PlayerController : MonoBehaviour
     //     hurtbox.died-=Die;
     // }
 
+    public void DisableMovement()
+    {
+        dead = true;
+        rb.linearVelocity = Vector2.zero;
+        spriteRendererCachorro.color = Color.gray;
+        spriteRendererGato.color = Color.gray;
+    }
+
+    public void EnableMovement()
+    {
+        dead = false;
+        spriteRendererCachorro.color = Color.white;
+        spriteRendererGato.color = Color.white;
+    }
+
     void Start()
     {
         SetCharacter(GameManager.Instance.IdPersonagemAtual);
@@ -93,7 +108,6 @@ public class PlayerController : MonoBehaviour
         rb.linearVelocity = Vector2.zero;
         deathAnimation.PlayDeath();
     }
-
 
     void Update()
     {
@@ -180,7 +194,7 @@ public class PlayerController : MonoBehaviour
             yield return null;
         }
         spriteRendererGato.transform.position = transform.position;
-        if (Direcao == Vector2.zero)
+        if (Direcao == Vector2.zero || dead)
         {
             animator.Play("PlayerIdle");
         }

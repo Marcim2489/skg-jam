@@ -63,6 +63,8 @@ public class GameManager : MonoBehaviour
         {
             Instance = this;
             DontDestroyOnLoad(gameObject);
+            SaveRecord(personagens[0], 10000);
+            SaveRecord(personagens[1], 10000);
             for (int i = 0; i < personagens.Length; i++)
             {
                 recordes[personagens[i]] = GetRecord(i);
