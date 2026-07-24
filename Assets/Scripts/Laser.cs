@@ -52,8 +52,8 @@ public class Laser : MonoBehaviour
         animator.Play("PreparingLaser");
         yield return new WaitForSeconds(0.3f);
         laserInstance = Instantiate(laser, transform);
-        SFXManager.Instance.PlaySound(laserSound, transform.position, 1f, false);
         ManageLaserSize();
+        SFXManager.Instance.PlaySound(laserSound, transform.position, 1f, false);
         yield return new WaitForSeconds(laserDuration);
         laserSprite.SetActive(false);
         animator.Play("New State");

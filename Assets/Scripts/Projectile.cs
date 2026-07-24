@@ -23,11 +23,11 @@ public class Projectile : MonoBehaviour
         // transform.rotation = Quaternion.LookRotation(transform.position + 10*(Vector3)direcion);
     }
 
-    //void OnTriggerEnter2D(Collider2D collision)
-    //{
-    //    if (collision.gameObject.layer == LayerMask.NameToLayer("Wall"))
-        //{
-           // Destroy(gameObject);
+    void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.layer == LayerMask.NameToLayer("Wall"))
+        {
+            Destroy(gameObject, 0.06f);
         }
     //}
 //}

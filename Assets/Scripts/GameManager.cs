@@ -54,6 +54,7 @@ public class GameManager : MonoBehaviour
     public event UnityAction<int> trocouPersonagem = delegate{};
     public string NomePersonagemAtual => personagens[IdPersonagemAtual];
     public int SequenciaAtual => sequenciaAtual;
+    public int Tier => (cenariosPercorridos/3)+1;
 
     Dictionary<string, int> recordes = new Dictionary<string, int>(2);
 
@@ -63,8 +64,6 @@ public class GameManager : MonoBehaviour
         {
             Instance = this;
             DontDestroyOnLoad(gameObject);
-            SaveRecord(personagens[0], 10000);
-            SaveRecord(personagens[1], 10000);
             for (int i = 0; i < personagens.Length; i++)
             {
                 recordes[personagens[i]] = GetRecord(i);

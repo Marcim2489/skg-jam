@@ -12,7 +12,8 @@ GameObject:
   - component: {fileID: 757420717605592792}
   - component: {fileID: 7502390622165244896}
   - component: {fileID: 8883931212507855871}
-  m_Layer: 0
+  - component: {fileID: 8153307797131503882}
+  m_Layer: 3
   m_Name: AtiradorGiratorio
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -120,5 +121,42 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::SuperSpawner
   projectile: {fileID: 3465190040116289733, guid: 045199cd26c7fdf4289b87852b440194, type: 3}
   timeToSpawn: 1
-  spawnOffset: 0.8
+  spawnOffset: 1.3
   projectileSpeed: 8
+  shotSound: {fileID: 8300000, guid: 15e9939879265b8438f9ed183e7822d7, type: 3}
+--- !u!58 &8153307797131503882
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4263220400763784333}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 6200000, guid: 2a6ddee7230d487428e346b8e8c8205c, type: 2}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0, y: 0}
+  m_Radius: 0.7474869
