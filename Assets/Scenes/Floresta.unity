@@ -127,6 +127,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2634082951718798275, guid: c6363b0da86a06e4fab71d7a5ff26975, type: 3}
+      propertyPath: delta
+      value: 200
+      objectReference: {fileID: 0}
     - target: {fileID: 5138254569826841320, guid: c6363b0da86a06e4fab71d7a5ff26975, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.3687744
@@ -170,6 +174,10 @@ PrefabInstance:
     - target: {fileID: 7688166552666465068, guid: c6363b0da86a06e4fab71d7a5ff26975, type: 3}
       propertyPath: m_Name
       value: SceneTransitioner
+      objectReference: {fileID: 0}
+    - target: {fileID: 7688166552666465068, guid: c6363b0da86a06e4fab71d7a5ff26975, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -3066,6 +3074,28 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 503161283355482974, guid: f685e8321572695499520aedf5f72553, type: 3}
   m_PrefabInstance: {fileID: 1356924056}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1465799997 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2967142787375554720, guid: ab43c5a400e9b384a8aa36034c54f9b4, type: 3}
+  m_PrefabInstance: {fileID: 7853724915397810688}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1465800005
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1465799997}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e2f1916581b16064e919229db0fe5cb8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DeathAnimation
+  jumpHeight: 2
+  jumpDuration: 0.35
+  fallSpeed: 7
+  rotationSpeed: 360
+  fallDistance: 12
 --- !u!1 &1486240270
 GameObject:
   m_ObjectHideFlags: 0
@@ -3774,6 +3804,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: GameManager
       objectReference: {fileID: 0}
+    - target: {fileID: 1523990647291991694, guid: 465e5a0061aa04b499eef4fb79cdf596, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6033090162447054678, guid: 465e5a0061aa04b499eef4fb79cdf596, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -4021,6 +4055,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: LevelManager
       objectReference: {fileID: 0}
+    - target: {fileID: 8709426170280891761, guid: cbcf21f7eb2c5b24ca607bc607a3fc9b, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -4081,7 +4119,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 2967142787375554720, guid: ab43c5a400e9b384a8aa36034c54f9b4, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1465800005}
   m_SourcePrefab: {fileID: 100100000, guid: ab43c5a400e9b384a8aa36034c54f9b4, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:

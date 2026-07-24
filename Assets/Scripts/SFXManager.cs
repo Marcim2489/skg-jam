@@ -32,7 +32,7 @@ public class SFXManager : MonoBehaviour
         AudioSource audioSource = (AudioSource)gameObject.AddComponent(typeof(AudioSource));
         audioSource.clip = clip;
         audioSource.spatialBlend = spatialBlend;
-        audioSource.volume = SoundSettings.Instance.VolumeLevel * 0.2f * volume;
+        //audioSource.volume = SoundSettings.Instance.VolumeLevel * 0.2f * volume;
         audioSource.Play();
         if (sceneIndependent)
         {
