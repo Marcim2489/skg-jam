@@ -4,8 +4,8 @@ public class SerraSpawner : MonoBehaviour
 {
     [SerializeField]BouncingObstacle serra;
     [SerializeField]Transform[] posicoesPossiveis;
-    [SerializeField]float minDirection = 0.2f;
-    [SerializeField]float maxDirection = 1f;
+    [SerializeField]float minDirection = 0.3f;
+    [SerializeField]float maxDirection = 0.7f;
     PlayerController player;
 
     void Start()
@@ -65,9 +65,9 @@ public class SerraSpawner : MonoBehaviour
 
         if (direction == Vector2.zero)
         {
-            direction = (posicao-playerPosition).normalized;
+            direction = posicao-playerPosition;
         }
 
-        s.ChangeDirection(direction);
+        s.ChangeDirection(direction.normalized);
     }
 }
