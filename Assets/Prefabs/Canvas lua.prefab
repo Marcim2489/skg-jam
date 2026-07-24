@@ -242,6 +242,7 @@ GameObject:
   - component: {fileID: 3502447723051636681}
   - component: {fileID: 5355245840286467272}
   - component: {fileID: 1968197399911718321}
+  - component: {fileID: 8423034157031704989}
   m_Layer: 5
   m_Name: time bar moldura
   m_TagString: Untagged
@@ -258,7 +259,7 @@ RectTransform:
   m_GameObject: {fileID: 3864396735206337858}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.7, y: 0.7, z: 0.7}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 6133361116908023842}
@@ -267,7 +268,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
-  m_AnchoredPosition: {x: 681, y: 292.2}
+  m_AnchoredPosition: {x: 861.8, y: 293.6}
   m_SizeDelta: {x: 593.75, y: 125}
   m_Pivot: {x: 0, y: 0.5}
 --- !u!222 &3502447723051636681
@@ -321,6 +322,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TimeBar
   bar: {fileID: 9070951284675718377}
+--- !u!114 &8423034157031704989
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3864396735206337858}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 22413d8e3e862fd45a86c6b4346a100e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::FloatingObject
+  altura: 0.1
+  velocidade: 1.5
+  rotacao: 1.2
 --- !u!1 &4157965873382297686
 GameObject:
   m_ObjectHideFlags: 0
@@ -560,6 +576,7 @@ GameObject:
   - component: {fileID: 3105724644643968636}
   - component: {fileID: 3911399631826357568}
   - component: {fileID: 4064129018659455817}
+  - component: {fileID: 3629361264200511913}
   m_Layer: 5
   m_Name: score background
   m_TagString: Untagged
@@ -584,7 +601,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -532.7787, y: 291.86}
+  m_AnchoredPosition: {x: -523.4, y: 288.2}
   m_SizeDelta: {x: 108.2213, y: 66.135}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &3911399631826357568
@@ -625,6 +642,21 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &3629361264200511913
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5925713813306683267}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 22413d8e3e862fd45a86c6b4346a100e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::FloatingObject
+  altura: 0.1
+  velocidade: 1.5
+  rotacao: 1.2
 --- !u!1 &9119848152180578037
 GameObject:
   m_ObjectHideFlags: 0
