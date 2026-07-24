@@ -709,29 +709,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &532481302 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2967142787375554720, guid: ab43c5a400e9b384a8aa36034c54f9b4, type: 3}
-  m_PrefabInstance: {fileID: 7853724915397810688}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &532481310
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 532481302}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e2f1916581b16064e919229db0fe5cb8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::DeathAnimation
-  jumpHeight: 2
-  jumpDuration: 0.35
-  fallSpeed: 25
-  rotationSpeed: 360
-  fallDistance: 20
-  deathSound: {fileID: 8300000, guid: 02101106ad95c014d8c36521c1f9c6d1, type: 3}
 --- !u!1001 &554033912
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4188,10 +4165,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1981761018312905428, guid: ab43c5a400e9b384a8aa36034c54f9b4, type: 3}
-      propertyPath: deathAnimation
-      value: 
-      objectReference: {fileID: 532481310}
     - target: {fileID: 2967142787375554720, guid: ab43c5a400e9b384a8aa36034c54f9b4, type: 3}
       propertyPath: m_Name
       value: Player
@@ -4239,10 +4212,7 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 2967142787375554720, guid: ab43c5a400e9b384a8aa36034c54f9b4, type: 3}
-      insertIndex: 2
-      addedObject: {fileID: 532481310}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ab43c5a400e9b384a8aa36034c54f9b4, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:

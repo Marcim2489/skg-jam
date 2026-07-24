@@ -10,5 +10,6 @@ public class LaserInstance : MonoBehaviour
         Vector2 newSize = new Vector2(0.5f, size);
         spriteRenderer.size = newSize;
         boxCollider.size = newSize;
+        boxCollider.offset = new Vector2(boxCollider.offset.x, -boxCollider.size.y*0.5f);
     }
 }

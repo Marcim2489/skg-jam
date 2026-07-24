@@ -7,6 +7,7 @@ public class Collectable: MonoBehaviour
     [SerializeField]Sprite[] ossoSprites;
     [SerializeField]SpriteRenderer spriteRenderer;
     [SerializeField]Collider2D collider2d;
+    [SerializeField]AudioClip[] sonsColetar;
     bool podeColidir = true;
 
     public void Setup()
@@ -80,6 +81,15 @@ public class Collectable: MonoBehaviour
         }
         if (collision.gameObject.CompareTag("Player"))
         {
+            int sequencia = GameManager.Instance.SequenciaAtual;
+            if (sequencia > 3)
+            {
+                sequencia = 3;
+            }else if (sequencia < 0)
+            {
+                sequencia = 0;
+            }
+            SFXManager.Instance.PlaySound(sonsColetar[sequencia], 1f, false);
             // Debug.Log("a");
             podeColidir = false;
             GameManager.Instance.IncreaseScore(value);

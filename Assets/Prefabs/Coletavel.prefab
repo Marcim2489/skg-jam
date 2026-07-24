@@ -119,6 +119,11 @@ MonoBehaviour:
   - {fileID: 860971857886672316, guid: f472743b4eaf95340adc193e00520ecc, type: 3}
   spriteRenderer: {fileID: 5708201282039841866}
   collider2d: {fileID: 5835704390049665312}
+  sonsColetar:
+  - {fileID: 8300000, guid: bcc7afd5a271a2f4a9f3779413a1d46d, type: 3}
+  - {fileID: 8300000, guid: ace21111f881d6c4f922e778a3f96f7f, type: 3}
+  - {fileID: 8300000, guid: 4bb471f35d81dd24f85b6bf8ecdc94b4, type: 3}
+  - {fileID: 8300000, guid: 85385e3d998cd994bab20d452cfedda8, type: 3}
 --- !u!70 &5835704390049665312
 CapsuleCollider2D:
   m_ObjectHideFlags: 0

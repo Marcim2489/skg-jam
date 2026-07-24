@@ -133,6 +133,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7154770574727591005}
   - component: {fileID: 1981761018312905428}
+  - component: {fileID: 3532495249324173136}
   - component: {fileID: 622155060268079779}
   - component: {fileID: 4389494785686453371}
   - component: {fileID: 157811599967135840}
@@ -298,6 +299,26 @@ MonoBehaviour:
   hurtbox: {fileID: 1364157179146830555}
   onGameOver: 0
   jumpSound: {fileID: 8300000, guid: 443d8dcf6af37ae45af8cab836e69353, type: 3}
+  deathAnimation: {fileID: 3532495249324173136}
+--- !u!114 &3532495249324173136
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2967142787375554720}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e2f1916581b16064e919229db0fe5cb8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DeathAnimation
+  jumpHeight: 2
+  jumpDuration: 0.35
+  fallDuration: 0.5
+  fallSpeed: 25
+  rotationSpeed: 360
+  fallDistance: 20
+  deathSound: {fileID: 8300000, guid: 02101106ad95c014d8c36521c1f9c6d1, type: 3}
 --- !u!50 &622155060268079779
 Rigidbody2D:
   serializedVersion: 5

@@ -11,6 +11,7 @@ public class Laser : MonoBehaviour
     [SerializeField]Vector2 laserOffset;
     [SerializeField]GameObject laserSprite;
     [SerializeField]Animator animator;
+    [SerializeField]AudioClip laserSound;
     LaserInstance laserInstance;
 
     void Start()
@@ -41,7 +42,7 @@ public class Laser : MonoBehaviour
             size = maxDistance;
         }
         laserInstance.ManageSize(size);
-        laserInstance.transform.position = transform.position+(Vector3)laserOffset - transform.up * 0.5f * size;
+        laserInstance.transform.position = transform.position+(Vector3)laserOffset - transform.up * 0f * size;
     }
 
     IEnumerator Shoot()
@@ -51,6 +52,7 @@ public class Laser : MonoBehaviour
         animator.Play("PreparingLaser");
         yield return new WaitForSeconds(0.3f);
         laserInstance = Instantiate(laser, transform);
+        SFXManager.Instance.PlaySound(laserSound, transform.position, 1f, false);
         ManageLaserSize();
         yield return new WaitForSeconds(laserDuration);
         laserSprite.SetActive(false);
